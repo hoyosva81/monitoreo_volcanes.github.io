@@ -1,0 +1,268 @@
+/* ============================================================
+   Vista del volcán: ficha técnica SAMA, morfometría, fuentes y editor.
+   Se carga después de styles.css y reutiliza sus variables.
+   ============================================================ */
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.nav-select { min-height: 36px; max-width: 220px; padding: 4px 28px 4px 12px; border: 1px solid var(--accent); border-radius: var(--radius); background: transparent; color: white; font: inherit; font-size: 14px; cursor: pointer; }
+.nav-select option { color: var(--azul); }
+
+/* Barra de herramientas y secciones */
+.bulletin-toolbar { position: sticky; top: var(--alto-cabecera, 0px); z-index: 1000; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 8px clamp(16px, 3vw, 42px); background: rgba(255, 255, 255, 0.96); border-bottom: 1px solid var(--borde); backdrop-filter: blur(6px); }
+.bulletin-toolbar .back-button { margin: 0; min-height: 40px; }
+.section-nav { display: flex; flex: 1 1 auto; flex-wrap: wrap; gap: 4px; }
+.section-nav a { padding: 8px 14px; border-radius: var(--radius); color: var(--azul); font-size: 14px; font-weight: 750; text-decoration: none; }
+.section-nav a:hover { background: var(--accent); }
+.toolbar-acciones { display: flex; gap: 8px; margin-left: auto; }
+.toolbar-button { min-height: 40px; padding: 8px 16px; border: 1px solid var(--azul); border-radius: var(--radius); background: white; color: var(--azul); font: inherit; font-weight: 750; cursor: pointer; }
+.toolbar-button:hover { background: var(--accent); }
+.toolbar-button-primary { background: var(--azul); color: white; }
+.toolbar-button-primary:hover { background: #0b3a66; color: white; }
+#bulletin-view section[id] { scroll-margin-top: calc(var(--alto-cabecera, 130px) + 78px); }
+.bulletin-subtitle { margin: 8px 0 0; font-size: 15px; color: var(--azul-suave); }
+.insar-heading { display: flex; align-items: end; justify-content: space-between; gap: 22px; padding: 6px 0 0; }
+.section-main-title { font-size: clamp(22px, 2.6vw, 30px); }
+.section-header p { margin: 8px 0 18px; font-size: 14px; }
+#seccion-ficha, #seccion-morfometria, #seccion-fuentes { margin-top: 34px; }
+.notice { margin: 20px 0 0; padding: 20px 24px; border-left: 5px solid var(--accent); border-radius: 6px; background: white; }
+.notice h2 { margin-bottom: 6px; font-size: 22px; }
+.notice p { margin: 0; font-size: 14px; }
+
+/* Visor de imágenes ampliadas */
+.visor { padding: 0; border: 0; border-radius: 10px; background: #0b1a2b; max-width: 96vw; max-height: 96vh; overflow: hidden; }
+.visor::backdrop { background: rgba(0, 16, 32, 0.82); }
+.visor img { display: block; max-width: 94vw; max-height: 84vh; object-fit: contain; background: white; }
+.visor p { margin: 0; padding: 10px 16px; color: white; font-size: 13px; }
+.visor-cerrar { position: absolute; top: 8px; right: 8px; width: 36px; height: 36px; border: 0; border-radius: 50%; background: rgba(255, 255, 255, 0.92); color: var(--azul); font-size: 16px; cursor: pointer; }
+.visor form { margin: 0; }
+
+/* ============================================================
+   Ficha de boletín SAMA (estilo «Boletín de Diapiros de Lodo»)
+   ============================================================ */
+.ficha { --f-pizarra: #52667a; --f-texto: #34475b; --f-borde: #a3afbb; --f-suave: #eef2f6; width: 100%; margin: 0 auto; overflow: hidden; background: white; color: var(--f-texto); border: 1px solid var(--borde); border-radius: 6px; font-size: 12.5px; line-height: 1.4; }
+.ficha p { margin: 0; }
+.ficha img[data-zoom]:not([hidden]) { cursor: zoom-in; }
+.ficha-cabecera { display: grid; grid-template-columns: minmax(200px, 25%) minmax(0, 1fr) auto auto; align-items: stretch; border-bottom: 1px solid var(--f-borde); }
+.ficha-marca { display: grid; place-items: center; padding: 14px 22px; background: var(--f-pizarra); border-bottom-right-radius: 26px; }
+.ficha-logo-sama { display: block; width: 100%; max-width: 230px; height: auto; filter: brightness(0) invert(1); }
+.ficha-titulo { align-self: center; padding: 12px 22px; }
+.ficha-titulo h2 { font-size: clamp(17px, 1.9vw, 22px); font-weight: 800; line-height: 1.15; letter-spacing: 0.2px; }
+.ficha-titulo p { margin-top: 6px; font-size: 12px; font-weight: 700; }
+.ficha-redes { display: grid; gap: 6px; place-content: center; padding: 0 24px; border-left: 1px solid var(--f-borde); border-right: 1px solid var(--f-borde); text-align: center; font-size: 13px; }
+.ficha-iconos { display: flex; gap: 14px; justify-content: center; }
+.ficha-iconos svg { width: 22px; height: 22px; }
+.ficha-logo-instituciones { align-self: center; width: auto; height: 54px; margin: 0 20px; }
+.ficha-cuerpo { display: grid; grid-template-columns: 340px minmax(0, 1fr); gap: 10px; padding: 10px; }
+.ficha-izq { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.ficha-der { display: grid; grid-template-rows: auto auto 1fr; gap: 8px; min-width: 0; }
+.tarjeta { min-width: 0; padding: 8px 12px 10px; background: white; border: 1px solid var(--f-borde); border-radius: 14px; }
+.pildora { color: #2f4156; font-size: 12px; font-weight: 800; letter-spacing: 0.2px; text-transform: uppercase; }
+.ficha-izq .pildora { display: block; margin: 0 0 6px; padding: 0 0 5px; text-align: center; border-bottom: 1px solid var(--f-borde); }
+.ficha-der .pildora { display: inline-block; margin: 0 0 8px; padding: 4px 18px; font-size: 13px; background: white; border: 1px solid var(--f-borde); border-radius: 12px; box-shadow: 0 1px 3px rgba(0, 32, 64, 0.14); }
+.fila { margin: 2px 0; }
+.fila b, .ficha-coords b { font-weight: 800; }
+.ficha-coords { display: grid; grid-template-columns: 1fr 1.15fr; gap: 6px; margin-top: 4px; }
+.dms { color: #4b5d70; }
+.ficha-foto { position: relative; flex: 1 1 140px; min-height: 120px; margin: 0; overflow: hidden; background: var(--f-suave); border: 1px solid var(--f-borde); border-radius: 12px; }
+.ficha-foto img { display: block; width: 100%; height: 100%; min-height: 140px; object-fit: cover; }
+.ficha-foto figcaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 14px 10px 4px; color: white; font-size: 10.5px; background: linear-gradient(transparent, rgba(0, 16, 32, 0.7)); }
+.ficha-ubicacion { margin: 0; }
+.ficha-ubicacion img { display: block; width: 100%; height: auto; }
+.sin-imagen { display: grid; place-items: center; min-height: 90px; padding: 10px; color: #7a8794; font-size: 11.5px; font-style: italic; text-align: center; background: var(--f-suave); border: 1px dashed var(--f-borde); border-radius: 10px; }
+.sin-imagen::before { content: attr(data-vacio); }
+.estado { display: -webkit-box; margin-bottom: 4px; overflow: hidden; color: #4b5d70; font-size: 11.5px; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+/* Actividad histórica de la ficha: línea de tiempo vertical, del evento más reciente al más antiguo. */
+.erupciones { position: relative; margin: 4px 0 0; padding: 0 0 0 18px; list-style: none; }
+.erupciones::before { position: absolute; top: 8px; bottom: 8px; left: 5px; width: 2px; content: ""; background: var(--f-borde); border-radius: 1px; }
+.erupciones.sin-eventos::before { display: none; }
+.erupciones li { position: relative; padding: 2px 0; }
+.erupciones li::before { position: absolute; top: 7px; left: -18px; width: 12px; height: 12px; box-sizing: border-box; content: ""; background: var(--volcan); border: 2px solid white; border-radius: 50%; box-shadow: 0 0 0 1px var(--volcan); }
+.erupciones li.vacio::before, .erupciones li.mas::before { display: none; }
+.erupciones.sin-eventos { padding-left: 0; }
+.erupciones .mas { color: #6b7886; font-size: 11px; }
+.vacio { color: #8794a1; font-style: italic; }
+.ficha.modo-edicion .vacio { padding: 0 5px; color: #7a5b00; font-style: normal; background: #fff4cc; border-radius: 4px; outline: 1px dashed #d4a017; }
+.ficha-fila { display: grid; grid-template-columns: minmax(190px, 32%) minmax(0, 1fr); gap: 16px; align-items: start; padding: 12px 14px; }
+.ficha-fila.sin-mapa { grid-template-columns: 1fr; }
+.ficha-mapa { align-self: stretch; margin: 0; }
+.ficha-mapa img { display: block; width: 100%; max-height: 330px; object-fit: contain; border-radius: 6px; }
+.ficha-mapa.sin-imagen { min-height: 150px; }
+.ficha-texto p { margin: 0 0 6px; }
+.chips { display: flex; flex-wrap: wrap; gap: 5px; margin: 0 0 8px; padding: 0; list-style: none; }
+.chips li { padding: 1px 9px; background: var(--f-suave); border: 1px solid #d3dbe3; border-radius: 9px; font-size: 11px; font-weight: 700; }
+.ficha-alertas { position: relative; display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 18px; align-items: center; align-self: end; padding: 8px 4px 0; isolation: isolate; }
+.ficha-alertas::before { position: absolute; top: 0; bottom: 0; left: 0; z-index: -1; width: 300px; content: ""; background: url("../assets/logos/sama.png") no-repeat left center / 260px auto; opacity: 0.07; }
+.ficha-alertas h3 { color: #34506e; font-size: 14px; font-weight: 800; line-height: 1.25; text-transform: uppercase; }
+.niveles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.nivel { padding: 5px 6px 6px; border-top: 5px solid var(--c); border-radius: 2px; }
+.nivel h4 { margin: 0 0 3px; color: var(--c); font-size: 13px; font-weight: 800; filter: brightness(0.82); }
+.nivel p { font-size: 12px; }
+.nivel.activo { background: color-mix(in srgb, var(--c) 14%, white); box-shadow: inset 0 0 0 2px var(--c); }
+.vigente { display: inline-block; margin-top: 4px; padding: 0 8px; color: white; font-size: 10px; font-weight: 800; background: var(--c); border-radius: 8px; filter: brightness(0.82); }
+
+/* Formato de página para el PDF: js/boletin.js lo activa al imprimir. */
+.ficha-izq, .ficha-der { min-height: 0; }
+.ficha.formato-pdf { width: 1240px; height: 765px; font-size: 10.5px; line-height: 1.3; border: 0; border-radius: 0; }
+.ficha.formato-pdf .ficha-cabecera { height: 92px; }
+.ficha.formato-pdf .ficha-logo-instituciones { height: 50px; }
+.ficha.formato-pdf .ficha-cuerpo { height: 672px; padding: 8px 10px; overflow: hidden; }
+.ficha.formato-pdf .ficha-izq { gap: 6px; }
+.ficha.formato-pdf .tarjeta { padding: 5px 10px 6px; }
+.ficha.formato-pdf .ficha-izq .pildora { margin-bottom: 4px; padding-bottom: 3px; font-size: 11px; }
+.ficha.formato-pdf .fila { margin: 1px 0; }
+.ficha.formato-pdf .ficha-coords { margin-top: 2px; }
+.ficha.formato-pdf .estado { -webkit-line-clamp: 2; margin-bottom: 2px; }
+.ficha.formato-pdf .erupciones li { padding: 0; }
+.ficha.formato-pdf .erupciones li::before { top: 4px; }
+.ficha.formato-pdf .ficha-der { grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) auto; }
+.ficha.formato-pdf .ficha-fila { min-height: 0; padding: 10px 12px; overflow: hidden; }
+.ficha.formato-pdf .ficha-mapa { min-height: 0; }
+.ficha.formato-pdf .ficha-mapa img { max-height: 238px; }
+.ficha.formato-pdf .ficha-foto { min-height: 50px; }
+.ficha.formato-pdf .ficha-foto img { min-height: 0; }
+.ficha.formato-pdf .ficha-ubicacion img { height: 140px; object-fit: contain; }
+.ficha.formato-pdf .ficha-alertas { padding-top: 4px; }
+.ficha.formato-pdf .nivel p { font-size: 11px; }
+
+@page { size: 1240px 765px; margin: 0; }
+@media print {
+    html, body { margin: 0; background: white !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .no-imprimir, #home-view { display: none !important; }
+    main { width: auto; margin: 0; }
+    #seccion-ficha { margin: 0; }
+    .ficha { break-inside: avoid; }
+}
+
+/* ============================================================
+   Línea de tiempo de la actividad (escala proporcional al tiempo)
+   ============================================================ */
+.linea-tiempo-caja { padding: 18px 30px; overflow: hidden; background: white; border: 1px solid var(--borde); border-radius: 6px; }
+.linea-tiempo { position: relative; height: 200px; margin: 0; padding: 0; list-style: none; }
+.linea-tiempo .eje { position: absolute; top: 50%; right: 0; left: 0; height: 4px; margin-top: -2px; background: var(--azul); border-radius: 2px; }
+.linea-tiempo .marca { position: absolute; top: 50%; width: 0; }
+.linea-tiempo .marca::before { position: absolute; top: -6px; left: -1px; width: 2px; height: 12px; content: ""; background: var(--azul); }
+.linea-tiempo .marca span { position: absolute; top: 10px; transform: translateX(-50%); color: var(--azul-suave); font-size: 12px; white-space: nowrap; }
+.linea-tiempo .marca.hoy::before { background: var(--insar); }
+.linea-tiempo .marca.hoy span { color: var(--insar); font-weight: 800; }
+.linea-tiempo .evento { position: absolute; top: 0; bottom: 0; width: 0; }
+.linea-tiempo .punto { position: absolute; top: 50%; left: 0; z-index: 2; width: 18px; height: 18px; box-sizing: border-box; margin: -9px 0 0 -9px; background: var(--volcan); border: 3px solid white; border-radius: 50%; box-shadow: 0 0 0 2px var(--volcan); }
+.linea-tiempo .tallo { position: absolute; left: -1px; width: 2px; background: #b9c4d0; }
+.linea-tiempo .evento.arriba .tallo { bottom: 50%; height: var(--sep); }
+.linea-tiempo .evento.abajo .tallo { top: 50%; height: var(--sep); }
+.linea-tiempo .etiqueta { position: absolute; left: 0; width: 150px; padding: 5px 10px 6px; text-align: center; font-size: 12.5px; line-height: 1.3; background: white; border: 1px solid var(--borde); border-radius: 10px; box-shadow: 0 2px 6px rgba(0, 32, 64, 0.1); transform: translateX(-50%); }
+.linea-tiempo .evento.arriba .etiqueta { bottom: calc(50% + var(--sep)); }
+.linea-tiempo .evento.abajo .etiqueta { top: calc(50% + var(--sep)); }
+.linea-tiempo .evento.alinear-izq .etiqueta { transform: translateX(-14px); text-align: left; }
+.linea-tiempo .evento.alinear-der .etiqueta { transform: translateX(calc(-100% + 14px)); text-align: right; }
+.linea-tiempo .etiqueta b { display: block; color: var(--azul); font-size: 14px; }
+.linea-tiempo .etiqueta span { color: var(--azul-suave); }
+.ultima-erupcion { margin-top: 14px; padding: 16px 20px; background: white; border-left: 5px solid var(--volcan); border-radius: 6px; }
+.ultima-erupcion h3 { margin-bottom: 6px; }
+.ultima-erupcion p { margin: 0; font-size: 14px; }
+
+/* ============================================================
+   Morfometría, galería y fuentes
+   ============================================================ */
+.morfo-grid { display: grid; grid-template-columns: minmax(280px, 380px) minmax(0, 1fr); gap: 16px; align-items: start; }
+.morfo-panel, .morfo-figura, .fuentes-seccion { min-width: 0; padding: 18px 20px; background: white; border: 1px solid var(--borde); border-radius: 6px; }
+.morfo-clase { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin-bottom: 12px; }
+.morfo-clase span { flex: 1 0 100%; font-size: 12px; text-transform: uppercase; }
+.morfo-clase strong { font-size: 30px; line-height: 1; }
+.insignia { padding: 2px 12px; font-size: 13px; font-style: normal; font-weight: 750; background: var(--accent); border-radius: 12px; }
+.morfo-tabla { width: 100%; border-collapse: collapse; font-size: 14px; }
+.morfo-tabla th, .morfo-tabla td { padding: 7px 4px; border-bottom: 1px solid var(--fondo); text-align: left; }
+.morfo-tabla td { font-weight: 750; text-align: right; }
+.aviso-inline { margin: 12px 0 0; padding: 10px 12px; font-size: 13px; background: #fff4cc; border-left: 4px solid #d4a017; border-radius: 4px; }
+.morfo-detalle { margin-top: 14px; font-size: 13px; }
+.morfo-detalle summary { cursor: pointer; font-weight: 750; }
+.morfo-detalle ul { margin: 8px 0 0; padding-left: 18px; }
+.morfo-detalle li { margin-bottom: 6px; }
+.morfo-figura { margin: 0; }
+.morfo-figura img { display: block; width: 100%; height: auto; cursor: zoom-in; }
+.morfo-figura figcaption { margin-top: 8px; font-size: 12.5px; color: var(--azul-suave); }
+.fuentes-seccion h3 { margin: 18px 0 8px; font-size: 16px; }
+.fuentes-seccion > .section-main-title { margin-bottom: 4px; }
+.fuentes-seccion p { margin: 0 0 8px; font-size: 13.5px; }
+.fuentes-lista { margin: 0; padding-left: 20px; font-size: 13px; }
+.fuentes-lista li { margin-bottom: 4px; }
+.actualizado { margin-top: 14px !important; color: var(--azul-suave); font-size: 12.5px !important; }
+.galeria { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; }
+.galeria figure { margin: 0; }
+.galeria img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; cursor: zoom-in; }
+.galeria figcaption { margin-top: 4px; font-size: 12px; }
+
+/* Resumen emergente de un volcán en el mapa general */
+.popup-volcan { min-width: 210px; }
+.popup-volcan h3 { margin-bottom: 2px; font-size: 17px; }
+.popup-volcan .popup-detalle { margin: 0 0 8px; color: var(--azul-suave); font-size: 13px; }
+.popup-volcan .popup-insignias { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
+.popup-volcan .popup-insignias span { padding: 1px 9px; font-size: 11.5px; font-weight: 750; background: var(--accent); border-radius: 10px; }
+.popup-volcan .popup-ver { width: 100%; min-height: 38px; color: white; font: inherit; font-weight: 750; background: var(--azul); border: 0; border-radius: var(--radius); cursor: pointer; }
+.popup-volcan .popup-ver:hover { background: #0b3a66; }
+
+/* ============================================================
+   Editor local (js/editor.js)
+   ============================================================ */
+.editor-panel { position: fixed; top: 0; right: 0; bottom: 0; z-index: 1600; display: flex; flex-direction: column; width: min(460px, 100vw); background: white; box-shadow: -8px 0 28px rgba(0, 32, 64, 0.28); }
+.editor-panel[hidden] { display: none; }
+.editor-cabecera { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; color: white; background: var(--azul); }
+.editor-cabecera h2 { color: white; font-size: 18px; }
+.editor-cabecera small { display: block; margin-top: 2px; font-size: 12px; font-weight: 400; opacity: 0.85; }
+.editor-cuerpo { flex: 1 1 auto; padding: 8px 18px 24px; overflow-y: auto; }
+.editor-pie { display: flex; align-items: center; gap: 10px; padding: 12px 18px; border-top: 1px solid var(--borde); background: var(--fondo); }
+.editor-pie .estado-guardado { flex: 1 1 auto; font-size: 13px; }
+.editor-pie .estado-guardado.error { color: #b42318; font-weight: 750; }
+.editor-seccion { margin-top: 16px; padding-bottom: 6px; border-bottom: 1px solid var(--fondo); }
+.editor-seccion > h3 { margin-bottom: 8px; font-size: 15px; }
+.editor-campo { display: grid; gap: 3px; margin-bottom: 10px; }
+.editor-campo label { font-size: 12.5px; font-weight: 750; }
+.editor-campo input, .editor-campo textarea, .editor-campo select { width: 100%; padding: 7px 10px; color: var(--azul); font: inherit; font-size: 14px; background: white; border: 1px solid var(--borde); border-radius: 10px; }
+.editor-campo textarea { min-height: 76px; resize: vertical; }
+.editor-doble { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.editor-lista { display: grid; gap: 8px; margin-bottom: 8px; }
+.editor-item { display: grid; grid-template-columns: 1fr auto; gap: 6px; padding: 8px; background: var(--fondo); border-radius: 10px; }
+.editor-item .editor-doble { grid-column: 1 / -1; }
+.editor-boton { min-height: 36px; padding: 6px 14px; color: var(--azul); font: inherit; font-size: 13.5px; font-weight: 750; background: white; border: 1px solid var(--azul); border-radius: var(--radius); cursor: pointer; }
+.editor-boton:hover { background: var(--accent); }
+.editor-boton.primario { color: white; background: var(--azul); }
+.editor-boton.peligro { color: #b42318; border-color: #b42318; }
+.editor-boton:disabled { opacity: 0.5; cursor: wait; }
+.editor-imagen { display: grid; grid-template-columns: 76px 1fr; gap: 10px; align-items: center; margin-bottom: 10px; }
+.editor-imagen img { width: 76px; height: 56px; object-fit: cover; background: var(--fondo); border: 1px solid var(--borde); border-radius: 8px; }
+.editor-imagen-vacia { display: grid; place-items: center; width: 76px; height: 56px; color: #7a8794; font-size: 11px; background: var(--fondo); border: 1px dashed var(--borde); border-radius: 8px; }
+.editor-imagen strong { display: block; font-size: 13px; }
+.editor-imagen-acciones { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.editor-ayuda { margin: 0 0 8px; color: var(--azul-suave); font-size: 12.5px; }
+body.editando main { margin-right: min(474px, 100vw); margin-left: 14px; }
+
+@media (max-width: 900px) {
+    .bulletin-toolbar { position: static; }
+    .toolbar-acciones { margin-left: 0; }
+    .insar-heading { align-items: stretch; flex-direction: column; }
+    .ficha-cabecera { grid-template-columns: 1fr; }
+    .ficha-marca { padding: 12px 22px; border-radius: 0; }
+    .ficha-redes { padding: 10px; border: 0; border-top: 1px solid var(--f-borde); border-bottom: 1px solid var(--f-borde); }
+    .ficha-logo-instituciones { justify-self: center; margin: 10px; }
+    .ficha-cuerpo, .ficha-fila, .ficha-alertas, .morfo-grid { grid-template-columns: 1fr; }
+    .ficha-foto img { height: 220px; }
+    .ficha-mapa img { max-height: 420px; }
+    .niveles { grid-template-columns: 1fr; }
+    .ficha-alertas::before { display: none; }
+    body.editando main { margin-right: 0; }
+}
+@media (max-width: 760px) {
+    /* En pantallas angostas la línea de tiempo pasa a una lista vertical, del más reciente al más antiguo. */
+    .linea-tiempo-caja { padding: 16px 18px; }
+    .linea-tiempo { display: flex; flex-direction: column-reverse; gap: 12px; height: auto !important; padding-left: 26px; border-left: 4px solid var(--azul); }
+    .linea-tiempo .eje, .linea-tiempo .marca, .linea-tiempo .tallo { display: none; }
+    .linea-tiempo .evento { position: relative; top: auto; bottom: auto; left: auto !important; width: auto; }
+    .linea-tiempo .punto { top: 14px; left: -37px; margin: 0; }
+    .linea-tiempo .etiqueta, .linea-tiempo .evento.arriba .etiqueta, .linea-tiempo .evento.abajo .etiqueta, .linea-tiempo .evento.alinear-izq .etiqueta, .linea-tiempo .evento.alinear-der .etiqueta { position: static; width: auto; text-align: left; transform: none; }
+}
+@media (max-width: 560px) {
+    .nav-select { width: 100%; max-width: 100%; }
+    .section-nav a { padding: 6px 10px; font-size: 13px; }
+    .toolbar-acciones { width: 100%; }
+    .toolbar-button { flex: 1 1 0; }
+    .ficha-coords { grid-template-columns: 1fr; }
+}
