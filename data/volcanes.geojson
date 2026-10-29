@@ -1,0 +1,370 @@
+{
+  "type": "FeatureCollection",
+  "name": "volcanes",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "las_platas_i",
+        "nombre": "Las Platas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.46289745306123,
+          8.548069672394929
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "el_aburrido",
+        "nombre": "El Aburrido"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.45734998162895,
+          8.340771749379273
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "nueva_esperanza",
+        "nombre": "Nueva Esperanza"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.51945486080045,
+          8.445827789552089
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "alto_mulatos",
+        "nombre": "Alto de Mulatos"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.54897280037991,
+          8.13491515818839
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "palmares_cenizosa",
+        "nombre": "Palmares Cenizosa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.6121667828503,
+          8.500757599133081
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cacahual",
+        "nombre": "Cacahual"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.42238888886558,
+          8.182083333225778
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "isla_el_encanto_damaquiel",
+        "nombre": "Isla El Encanto (Damaquiel)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.60911967733729,
+          8.742532397158005
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "arboletes",
+        "nombre": "Arboletes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.41803079671246,
+          8.862066822714265
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "virgen_del_cobre",
+        "nombre": "Virgen del Cobre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.76575607228465,
+          8.434918947574715
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "melito_alto",
+        "nombre": "Mellito AltoT"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.6369124678965,
+          8.584769886691936
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "giganton",
+        "nombre": "Giganton"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.62245821603123,
+          8.68877911268959
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "candelaria",
+        "nombre": "Candelaria"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.4779208949344,
+          8.658357628830938
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "manuel_cuello",
+        "nombre": "Manuel Cuello"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.68408627969399,
+          8.135589503604326
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "san_felipe",
+        "nombre": "San Felipe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.61594278468408,
+          8.11344424013412
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "pueblo_nuevo",
+        "nombre": "Pueblo Nuevo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.66768332060269,
+          8.41567836826858
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "el_carlo",
+        "nombre": "El Carlo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.74251630432362,
+          8.38851742795504
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "las_changas",
+        "nombre": "Las Changas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.5760283646744,
+          8.551419984655796
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "santa_rosa_palmares",
+        "nombre": "Santa Rosa de los Palmares"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.55063289114972,
+          8.503882958558151
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "las_mercedes",
+        "nombre": "Finca Las Mercedes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.68662901418918,
+          8.594327359021074
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "san_rafael",
+        "nombre": "San Rafael"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.63036807874289,
+          8.375860921233883
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cienaguita",
+        "nombre": "Cienaguita"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.44794709717972,
+          8.757862160077947
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "san_juancito",
+        "nombre": "San Juancito"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.5145462712293,
+          8.728601029100718
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "las_platas_ii",
+        "nombre": "Las Platas II"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.48089596281866,
+          8.562921284906913
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "finca_wendy",
+        "nombre": "Finca Wendy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.3101746101848,
+          8.312818191346715
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "volcan_vereda_molinillo",
+        "nombre": "Volcán Vereda Molinillo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.28242015329741,
+          8.35787515913037
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "los_almendros",
+        "nombre": "Los Almendros"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.2111609793041,
+          8.401516671693287
+        ]
+      }
+    }
+  ]
+}

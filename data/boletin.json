@@ -1,0 +1,1406 @@
+{
+  "general": {
+    "numero_boletin": "01",
+    "red_social": "@DagranAntioquia",
+    "morfologia": "Los volcanes de lodo del Caribe colombiano —incluida la región de Urabá— se manifiestan geomorfológicamente como “cerros en forma de domo de morfología colinada, de laderas convexas y cima plana o en artesa”, formados por la acumulación de lodos de erupciones previas y por deformación tectónica asociada al diapirismo de lodos (Servicio Geológico Colombiano, 2017, “Volcanismo de lodo del Caribe central colombiano”, DOI 10.32685/9789585978201). Esta descripción es general para el conjunto de volcanes de la región.",
+    "morfologia_sin_datos": "No se encontró en las fuentes consultadas una caracterización morfológica de campo (altura del domo, forma y diámetro del cráter, pendiente) específica y verificada para este volcán en particular.",
+    "nota_monitoreo": "El Servicio Geológico Colombiano (SGC) ha declarado que, por la cantidad (más de 100 volcanes de lodo identificados en el Caribe colombiano) y la dispersión de estos cuerpos, no es viable establecer un sistema de monitoreo individual para cada uno; el seguimiento es reactivo (inspecciones puntuales tras eventos reportados) y depende en buena medida del reporte comunitario de anomalías.",
+    "entidad_vigilancia": "SAMA (caracterización y priorización, con EAFIT y Corpourabá); a nivel nacional, el SGC es la entidad técnica de referencia para el volcanismo de lodo.",
+    "nota_construcciones": "Conteo en radio fijo medido en línea recta desde el punto del volcán; el conteo de 1 km es acumulado e incluye las construcciones de 500 m.",
+    "niveles_alerta": [
+      {
+        "id": "base",
+        "titulo": "Sin actividad:",
+        "descripcion": "Sismicidad normal y sin deformaciones en el volcán."
+      },
+      {
+        "id": "moderada",
+        "titulo": "Actividad moderada:",
+        "descripcion": "Leve aumento de sismicidad y pequeñas deformaciones por ascenso de materiales."
+      },
+      {
+        "id": "alta",
+        "titulo": "Actividad alta:",
+        "descripcion": "Fuerte emisión de lodo y gases, con riesgo de contaminación del agua, crecientes y daños en infraestructuras."
+      }
+    ],
+    "fuentes": [
+      "Servicio Geológico Colombiano (2017). Volcanismo de lodo del Caribe central colombiano. DOI 10.32685/9789585978201.",
+      "Infobae (12-nov-2024). Qué son los volcanes de lodo y dónde están ubicados.",
+      "Infobae (13-nov-2024). Qué encontró el SGC al inspeccionar el volcán Los Aburridos.",
+      "El Espectador. Así quedó la zona de la erupción de lodo del volcán El Aburrido, en Turbo.",
+      "Infobae (26-feb-2026). San Juan de Urabá: qué causó la columna de fuego y las grietas en Antioquia.",
+      "SAMA/EAFIT. Informe de flujos, mayo de 2026: WP1.2.6 Modelado de flujos de lodo (Q-LavHA) y WP1.2.7 Piloto de monitoreo.",
+      "Napoli et al. (2025). Clasificación morfométrica de volcanes de lodo (cono, pastel de lodo)."
+    ],
+    "fecha_boletin": "2026-08-10"
+  },
+  "volcanes": {
+    "las_platas_i": {
+      "municipio": "Arboletes",
+      "nombre_principal": "Las Platas, Santa fé de las Platas",
+      "altitud_msnm": 322,
+      "ubicacion_texto": "Ubicado en la vereda El Volcán, corregimiento Santafé de Las Platas, municipio de Arboletes, sobre un edificio de 1,391 hectáreas.",
+      "vereda": "El Volcán",
+      "corregimiento": "Santafé de Las Platas",
+      "tipo": "Tipo I",
+      "comportamiento_flujo": "se encuentra en una zona de colinas estructurales. Su propagación tiene un patrón dendrítico: el flujo no se expande de forma circular, sino que se alarga buscando los lechos de quebradas o escorrentías cercanas, y el lodo tiende a encañonarse hacia las quebradas la Salada y La Burrita.",
+      "erupciones": [
+        {
+          "fecha": "1991-12-02",
+          "precision": "dia",
+          "descripcion": ""
+        },
+        {
+          "fecha": "2006-11-01",
+          "precision": "dia",
+          "descripcion": ""
+        },
+        {
+          "fecha": "2011-04-21",
+          "precision": "dia",
+          "descripcion": ""
+        },
+        {
+          "fecha": "2017-11-28",
+          "precision": "dia",
+          "descripcion": ""
+        }
+      ],
+      "red_monitoreo": "No cuenta con una red instrumental de monitoreo sísmico ni geodésico (GPS) específica.",
+      "afectaciones": {
+        "construcciones_500m": 33,
+        "construcciones_1km": 68,
+        "infraestructura_critica": "Vía Veredal"
+      },
+      "nombre": "Las Platas",
+      "imagenes": {
+        "foto": {
+          "archivo": "./assets/fotos/las_platas_i/principal.webp",
+          "pie": "Vista aérea erupción 2024 @telemedellín"
+        },
+        "mapa_ubicacion": {
+          "archivo": "./assets/mapas/las_platas_i/ubicacion.webp",
+          "pie": ""
+        },
+        "mapa_propagacion": {
+          "archivo": "./assets/mapas/las_platas_i/propagacion.webp",
+          "pie": ""
+        },
+        "mapa_amenaza": {
+          "archivo": "./assets/mapas/las_platas_i/amenaza.webp",
+          "pie": ""
+        },
+        "morfometria": {
+          "archivo": "./assets/mapas/las_platas_i/morfometria.webp",
+          "pie": "Morfometría de Las Platas: (a) mapa del DEM con la base y los ejes; (b) perfiles A-B y C-D."
+        }
+      },
+      "actualizado": "2026-10-27",
+      "morfometria": {
+        "clase": "Cono",
+        "clase_calculada": "Cono",
+        "origen_clase": "usuario",
+        "tamano": "Grande",
+        "dmax_m": 3114,
+        "dmin_m": 2486,
+        "dmean_m": 2800,
+        "altura_m": 119.2,
+        "hr": 0.085,
+        "arctan_hr_grados": 4.9,
+        "pendiente_dem_grados": 9.5,
+        "azimuts_interpolados": 15,
+        "pct_azimuts_interpolados": 0.12,
+        "base_poco_fiable": false,
+        "hr_alto_segun_articulo": false,
+        "bsr": 0.798,
+        "dem": "Servicio-10186.tif",
+        "sb_km2_circulo": 6.157,
+        "v_cono_km3": 0.2415,
+        "fuente": "Napoli et al. (2025); morfometria_clasificacion.xlsx"
+      },
+      "notas_internas": "Morfometría: Clase confirmada por el usuario (cono). H muy sensible a la base: cotas del pie de 108 a 283 m."
+    },
+    "el_aburrido": {
+      "municipio": "Turbo",
+      "nombre_principal": "El Aburrido",
+      "altitud_msnm": 317,
+      "tipo": "Tipo I",
+      "comportamiento_flujo": "El modelo muestra una estructura lobulada, con espesores de 0.5-2 m en zonas planas; en eventos mayores el lodo puede desplazarse cientos de metros siguiendo un patrón dendrítico controlado por la topografía, concentrando el riesgo en lechos de arroyos secos o quebradas cercanas al volcán.",
+      "estado_actividad": "Activo — última reactivación documentada en 2024 tras un periodo de calma.",
+      "ultima_erupcion_texto": "El 11 de noviembre de 2024, hacia las 4:45 p.m., este volcán hizo erupción tras permanecer inactivo cerca de 10 años. El evento consistió en la emisión y explosión de gas metano acumulado, con dispersión de lodo alrededor del cráter; el área afectada fue reducida y localizada. El Servicio Geológico Colombiano (SGC) inspeccionó la zona y señaló que el fenómeno seguiría siendo monitoreado para anticipar eventos futuros ( 12 y 13-nov-2024; El Espectador; Portafolio). Este volcán tiene además erupciones documentadas previas el 22 de enero de 2002, el 19 de septiembre de 2003 y el 11 de septiembre de 2011.",
+      "erupciones": [
+        {
+          "fecha": "2002-01-22",
+          "precision": "dia",
+          "descripcion": ""
+        },
+        {
+          "fecha": "2003-09-19",
+          "precision": "dia",
+          "descripcion": ""
+        },
+        {
+          "fecha": "2011-09-11",
+          "precision": "dia",
+          "descripcion": ""
+        },
+        {
+          "fecha": "2024-11-11",
+          "precision": "dia",
+          "descripcion": ""
+        }
+      ],
+      "red_monitoreo": "Sensores sísmicos Raspberry Shake 3D, con datos continuos registrados durante solo 4 días en un punto.",
+      "afectaciones": {
+        "construcciones_500m": 3,
+        "construcciones_1km": 17,
+        "infraestructura_critica": "Vía a san Pedro de Urabá",
+        "poblacion": "109 personas afectadas en la erupción del 2024"
+      },
+      "nombre": "El Aburrido",
+      "imagenes": {
+        "mapa_ubicacion": {
+          "archivo": "./assets/mapas/el_aburrido/ubicacion.webp",
+          "pie": ""
+        },
+        "morfometria": {
+          "archivo": "./assets/mapas/el_aburrido/morfometria.webp",
+          "pie": "Morfometría de El Aburrido: (a) mapa del DEM con la base y los ejes; (b) perfiles A-B y C-D."
+        },
+        "foto": {
+          "archivo": "./assets/fotos/el_aburrido/principal-20261027204715592.webp",
+          "pie": "@Uraba_nuestra_casa"
+        }
+      },
+      "actualizado": "2026-10-27",
+      "morfometria": {
+        "clase": "Cono",
+        "clase_calculada": "Cono",
+        "origen_clase": "usuario",
+        "tamano": "Grande",
+        "dmax_m": 3102,
+        "dmin_m": 2571,
+        "dmean_m": 2837,
+        "altura_m": 133.5,
+        "hr": 0.094,
+        "arctan_hr_grados": 5.4,
+        "pendiente_dem_grados": 8.8,
+        "azimuts_interpolados": 15,
+        "pct_azimuts_interpolados": 0.12,
+        "base_poco_fiable": false,
+        "hr_alto_segun_articulo": false,
+        "bsr": 0.829,
+        "dem": "sub_uraba1.tif",
+        "sb_km2_circulo": 6.32,
+        "v_cono_km3": 0.2788,
+        "fuente": "Napoli et al. (2025); morfometria_clasificacion.xlsx"
+      },
+      "galeria": [],
+      "vereda": "El Volcán",
+      "nivel_actividad": "base"
+    },
+    "nueva_esperanza": {
+      "municipio": "Necoclí",
+      "altitud_msnm": 251,
+      "estado_actividad": "Se registra erupción el 7 de octubre del 2026",
+      "ultima_erupcion_texto": "",
+      "erupciones": [
+        {
+          "fecha": "2003-09-02",
+          "precision": "dia",
+          "descripcion": ""
+        },
+        {
+          "fecha": "2024-01-01",
+          "precision": "dia",
+          "descripcion": ""
+        },
+        {
+          "fecha": "2026-10-07",
+          "precision": "dia",
+          "descripcion": ""
+        }
+      ],
+      "afectaciones": {
+        "construcciones_500m": 0,
+        "construcciones_1km": 7,
+        "infraestructura_critica": "",
+        "poblacion": "Posible afectación de la escuela"
+      },
+      "nombre": "Nueva Esperanza",
+      "imagenes": {
+        "mapa_ubicacion": {
+          "archivo": "./assets/mapas/nueva_esperanza/ubicacion.webp",
+          "pie": ""
+        },
+        "morfometria": {
+          "archivo": "./assets/mapas/nueva_esperanza/morfometria.webp",
+          "pie": "Morfometría de Nueva Esperanza."
+        }
+      },
+      "actualizado": "2026-10-27",
+      "morfometria": {
+        "clase": "Cono",
+        "clase_calculada": "Cono",
+        "origen_clase": "usuario",
+        "tamano": "Grande",
+        "dmax_m": 2271,
+        "dmin_m": 1638,
+        "dmean_m": 1955,
+        "altura_m": 109.4,
+        "hr": 0.112,
+        "arctan_hr_grados": 6.4,
+        "pendiente_dem_grados": 10.7,
+        "azimuts_interpolados": 0,
+        "pct_azimuts_interpolados": 0,
+        "base_poco_fiable": false,
+        "hr_alto_segun_articulo": false,
+        "bsr": 0.721,
+        "dem": "sub_uraba1.tif",
+        "sb_km2_circulo": 3.002,
+        "v_cono_km3": 0.1066,
+        "fuente": "Napoli et al. (2025); morfometria_clasificacion.xlsx"
+      },
+      "galeria": [],
+      "nivel_actividad": "moderada"
+    },
+    "alto_mulatos": {
+      "municipio": "Turbo",
+      "nombre_principal": "Alto de Mulatos",
+      "altitud_msnm": 388,
+      "tipo": "Tipo I",
+      "comportamiento_flujo": "El flujo simulado está fuertemente canalizado, buscando las zonas de depresión natural que drenan hacia la cuenca del río Mulatos; el espesor puede superar los 2 m, con fuerza de arrastre capaz de remover vegetación arbórea y destruir infraestructura liviana (cercas, galpones). El lodo es altamente salino: al secarse crea una costra que impide el crecimiento de vegetación por años ('quemado' químico).",
+      "estado_actividad": "Con antecedente de erupción documentado (ver evento abajo); sin clasificación oficial de estado actual (activo/latente/extinto) publicada para este volcán.",
+      "ultima_erupcion_texto": "1 de enero de 1993. Evento del 3 de junio de 2016: erupción intensa que afectó un área considerable (Informe_flujos_Mayo2026, según caracterización técnica [2] citada allí).",
+      "erupciones": [
+        {
+          "fecha": "1993",
+          "precision": "anio",
+          "descripcion": ""
+        },
+        {
+          "fecha": "2016-06-03",
+          "precision": "dia",
+          "descripcion": ""
+        }
+      ],
+      "red_monitoreo": "No cuenta con una red instrumental de monitoreo sísmico ni geodésico (GPS) específica.",
+      "afectaciones": {
+        "construcciones_500m": 80,
+        "construcciones_1km": 86,
+        "poblacion": ".",
+        "amenaza_texto": "Modelado de propagación de flujos de lodo (Q-LavHA) disponible: mapa de probabilidad de propagación."
+      },
+      "notas_internas": "Mapa de amenaza (texto original): Modelado de amenaza Q-LavHA COMPLETADO (Informe_flujos_Mayo2026, WP1.2.6, avance 100%) — mapa de probabilidad de propagación de flujo (Figura 1-108).\nFuente: capa Construcciones_Afectadas cargada por Emilio (D:\\SAMA\\diapiros\\insumos_priorizacion\\Volcanes_Lodo_Uraba_20260910.gdb), distancia recta desde el punto del volcán (volcanes_lodo_pt) a cada polígono de construcción — NO es el mismo conteo que usa la zona de influencia modelada de priorizacion_volcanes_lodo.xlsx, son dos radios/métodos distintos y no intercambiables. Mapa de amenaza: Modelado de amenaza Q-LavHA COMPLETADO (Informe_flujos_Mayo2026, WP1.2.6, avance 100%) — mapa de probabilidad de propagación de flujo (Figura 1-108).\nMorfometría: arctan(H/R) = 4,97°, justo bajo 5°. Hay 2 zonas de influencia con este nombre: se usó la que contiene el punto.",
+      "nombre": "Alto de Mulatos",
+      "imagenes": {
+        "mapa_ubicacion": {
+          "archivo": "./assets/mapas/alto_mulatos/ubicacion.webp",
+          "pie": ""
+        },
+        "morfometria": {
+          "archivo": "./assets/mapas/alto_mulatos/morfometria.webp",
+          "pie": "Morfometría de Alto de Mulatos: (a) mapa del DEM con la base y los ejes; (b) perfiles A-B y C-D."
+        }
+      },
+      "actualizado": "2026-10-27",
+      "morfometria": {
+        "clase": "Cono",
+        "clase_calculada": "Cono",
+        "origen_clase": "usuario",
+        "tamano": "Grande",
+        "dmax_m": 2683,
+        "dmin_m": 2216,
+        "dmean_m": 2450,
+        "altura_m": 107.1,
+        "hr": 0.087,
+        "arctan_hr_grados": 5,
+        "pendiente_dem_grados": 10.1,
+        "azimuts_interpolados": 3,
+        "pct_azimuts_interpolados": 0.03,
+        "base_poco_fiable": false,
+        "hr_alto_segun_articulo": false,
+        "bsr": 0.826,
+        "dem": "sub_uraba1.tif",
+        "sb_km2_circulo": 4.713,
+        "v_cono_km3": 0.1668,
+        "fuente": "Napoli et al. (2025); morfometria_clasificacion.xlsx"
+      }
+    },
+    "san_juancito": {
+      "municipio": "San Juan de Urabá",
+      "nombre_principal": "San Juancito",
+      "altitud_msnm": 98,
+      "tipo": "Tipo I",
+      "estado_actividad": "Sin clasificación oficial publicada disponible para este volcán específico en las fuentes consultadas.",
+      "ultima_erupcion_texto": "",
+      "erupciones": [
+        {
+          "fecha": "2026-02-26",
+          "precision": "dia",
+          "descripcion": ""
+        }
+      ],
+      "red_monitoreo": "No cuenta con una red instrumental de monitoreo sísmico ni geodésico (GPS) específica.",
+      "afectaciones": {
+        "construcciones_500m": 22,
+        "construcciones_1km": 29,
+        "amenaza_texto": "Sin modelado de propagación de flujos para este volcán."
+      },
+      "notas_internas": "Erupción confirmada el 26 de febrero de 2026 — ver nota de confirmación abajo.\nMapa de amenaza (texto original): No incluido en el modelado de amenaza Q-LavHA del Informe_flujos_Mayo2026 (7 volcanes priorizados: El Aburrido, Las Platas, Melito Alto, Pueblo Nuevo, Las Changas, Cacahual, Alto de Mulatos). Sin cartografía de amenaza específica identificada en las fuentes disponibles para este volcán.\nFuente: capa Construcciones_Afectadas cargada por Emilio (D:\\SAMA\\diapiros\\insumos_priorizacion\\Volcanes_Lodo_Uraba_20260910.gdb), distancia recta desde el punto del volcán (volcanes_lodo_pt) a cada polígono de construcción — NO es el mismo conteo que usa la zona de influencia modelada de priorizacion_volcanes_lodo.xlsx, son dos radios/métodos distintos y no intercambiables. Mapa de amenaza: No incluido en el modelado de amenaza Q-LavHA del Informe_flujos_Mayo2026 (7 volcanes priorizados: El Aburrido, Las Platas, Melito Alto, Pueblo Nuevo, Las Changas, Cacahual, Alto de Mulatos). Sin cartografía de amenaza específica identificada en las fuentes disponibles para este volcán.\nMorfometría: Clase confirmada por el usuario (cono). Los escenarios de plano regional (~2,5 km²) coinciden con la zona de influencia; la base radial es más grande.",
+      "nombre": "San Juancito",
+      "imagenes": {
+        "mapa_ubicacion": {
+          "archivo": "./assets/mapas/san_juancito/ubicacion.webp",
+          "pie": ""
+        },
+        "morfometria": {
+          "archivo": "./assets/mapas/san_juancito/morfometria.webp",
+          "pie": "Morfometría de San Juancito: (a) mapa del DEM con la base y los ejes; (b) perfiles A-B y C-D."
+        }
+      },
+      "actualizado": "2026-10-27",
+      "morfometria": {
+        "clase": "Cono",
+        "clase_calculada": "Cono",
+        "origen_clase": "usuario",
+        "tamano": "Grande",
+        "dmax_m": 2727,
+        "dmin_m": 1787,
+        "dmean_m": 2257,
+        "altura_m": 66.7,
+        "hr": 0.059,
+        "arctan_hr_grados": 3.4,
+        "pendiente_dem_grados": 5.4,
+        "azimuts_interpolados": 58,
+        "pct_azimuts_interpolados": 0.48,
+        "base_poco_fiable": false,
+        "hr_alto_segun_articulo": false,
+        "bsr": 0.655,
+        "dem": "MDS12_05659_20140316.tif",
+        "sb_km2_circulo": 4,
+        "v_cono_km3": 0.0851,
+        "fuente": "Napoli et al. (2025); morfometria_clasificacion.xlsx"
+      }
+    },
+    "palmares_cenizosa": {
+      "municipio": "Necoclí",
+      "nombre_principal": "Palmares Cenizosa",
+      "altitud_msnm": 169,
+      "tipo": "Tipo I",
+      "estado_actividad": "Sin clasificación oficial publicada disponible para este volcán específico en las fuentes consultadas.",
+      "ultima_erupcion_texto": "Registro histórico de erupciones: 12 de diciembre de 2006; 2 de marzo de 2016; 30 de mayo de 2021.",
+      "erupciones": [
+        {
+          "fecha": "2006-12-12",
+          "precision": "dia",
+          "descripcion": ""
+        },
+        {
+          "fecha": "2016-03-02",
+          "precision": "dia",
+          "descripcion": ""
+        },
+        {
+          "fecha": "2021-05-30",
+          "precision": "dia",
+          "descripcion": ""
+        }
+      ],
+      "red_monitoreo": "No cuenta con una red instrumental de monitoreo sísmico ni geodésico (GPS) específica.",
+      "afectaciones": {
+        "construcciones_500m": 10,
+        "construcciones_1km": 44,
+        "amenaza_texto": "Usado para calibrar el modelo de propagación Q-LavHA; sin escenario de propagación propio."
+      },
+      "notas_internas": "Este volcán fue, junto con El Aburrido y Las Platas, uno de los 3 usados para calibrar el modelo Q-LavHA en el Informe_flujos_Mayo2026 — no tiene escenario de propagación propio modelado en ese informe (ver advertencia metodológica al inicio del documento).\nMapa de amenaza (texto original): Usado en el Informe_flujos_Mayo2026 para calibrar el umbral de probabilidad del modelo Q-LavHA, junto con El Aburrido y Las Platas (implica que existe un flujo histórico real cartografiado para contrastar el modelo) — pero NO aparece entre los 7 volcanes con escenario de propagación modelado y descrito en ese informe (El Aburrido, Las Platas, Melito Alto, Pueblo Nuevo, Las Changas, Cacahual, Alto de Mulatos). No hay mapa de amenaza propio de este volcán en esa fuente, solo su uso como dato de calibración (ver advertencia metodológica al inicio de este documento).\nFuente: capa Construcciones_Afectadas cargada por Emilio (D:\\SAMA\\diapiros\\insumos_priorizacion\\Volcanes_Lodo_Uraba_20260910.gdb), distancia recta desde el punto del volcán (volcanes_lodo_pt) a cada polígono de construcción — NO es el mismo conteo que usa la zona de influencia modelada de priorizacion_volcanes_lodo.xlsx, son dos radios/métodos distintos y no intercambiables. Mapa de amenaza: Usado en el Informe_flujos_Mayo2026 para calibrar el umbral de probabilidad del modelo Q-LavHA, junto con El Aburrido y Las Platas (implica que existe un flujo histórico real cartografiado para contrastar el modelo) — pero NO aparece entre los 7 volcanes con escenario de propagación modelado y descrito en ese informe (El Aburrido, Las Platas, Melito Alto, Pueblo Nuevo, Las Changas, Cacahual, Alto de Mulatos). No hay mapa de amenaza propio de este volcán en esa fuente, solo su uso como dato de calibración (ver advertencia metodológica al inicio de este documento).\nMorfometría: Clase confirmada por el usuario (cono).",
+      "nombre": "Palmares Cenizosa",
+      "imagenes": {
+        "mapa_ubicacion": {
+          "archivo": "./assets/mapas/palmares_cenizosa/ubicacion.webp",
+          "pie": ""
+        },
+        "morfometria": {
+          "archivo": "./assets/mapas/palmares_cenizosa/morfometria.webp",
+          "pie": "Morfometría de Palmares Cenizosa: (a) mapa del DEM con la base y los ejes; (b) perfiles A-B y C-D."
+        }
+      },
+      "actualizado": "2026-10-27",
+      "morfometria": {
+        "clase": "Cono",
+        "clase_calculada": "Cono",
+        "origen_clase": "usuario",
+        "tamano": "Grande",
+        "dmax_m": 2773,
+        "dmin_m": 2461,
+        "dmean_m": 2617,
+        "altura_m": 87.6,
+        "hr": 0.067,
+        "arctan_hr_grados": 3.8,
+        "pendiente_dem_grados": 5.7,
+        "azimuts_interpolados": 13,
+        "pct_azimuts_interpolados": 0.11,
+        "base_poco_fiable": false,
+        "hr_alto_segun_articulo": false,
+        "bsr": 0.888,
+        "dem": "sub_uraba1.tif",
+        "sb_km2_circulo": 5.378,
+        "v_cono_km3": 0.1566,
+        "fuente": "Napoli et al. (2025); morfometria_clasificacion.xlsx"
+      }
+    },
+    "cacahual": {
+      "municipio": "Turbo",
+      "nombre_principal": "Cacahual",
+      "altitud_msnm": 366,
+      "tipo": "Tipo I",
+      "comportamiento_flujo": "Según el Informe_flujos_Mayo2026, es un volcán de lodo de gran extensión, con morfología de domo achatado y múltiples centros de emisión (puntos de salida de lodo). Se encuentra en zona de colinas bajas, lo que facilita que el lodo se extienda de forma radial si no encuentra un canal de drenaje definido. Es una importante fuente de emisión de gas metano, lo que representa alto riesgo de explosión inflamable ante una emanación alta de gas.",
+      "estado_actividad": "Con antecedente de erupción documentado (ver evento abajo); sin clasificación oficial de estado actual (activo/latente/extinto) publicada para este volcán.",
+      "ultima_erupcion_texto": "Históricamente ha mostrado erupciones con flujos que pueden recorrer cientos de metros, debido al gran volumen de lodo acumulado en su diapiro (Informe_flujos_Mayo2026; no reporta fecha exacta de un evento específico).",
+      "red_monitoreo": "No cuenta con una red instrumental de monitoreo sísmico ni geodésico (GPS) específica.",
+      "afectaciones": {
+        "construcciones_500m": 6,
+        "construcciones_1km": 14,
+        "amenaza_texto": "Modelado de propagación de flujos de lodo (Q-LavHA) disponible: mapa de probabilidad de propagación."
+      },
+      "notas_internas": "Mapa de amenaza (texto original): Modelado de amenaza Q-LavHA COMPLETADO (Informe_flujos_Mayo2026, WP1.2.6, avance 100%) — mapa de probabilidad de propagación de flujo (Figura 1-107).\nFuente: capa Construcciones_Afectadas cargada por Emilio (D:\\SAMA\\diapiros\\insumos_priorizacion\\Volcanes_Lodo_Uraba_20260910.gdb), distancia recta desde el punto del volcán (volcanes_lodo_pt) a cada polígono de construcción — NO es el mismo conteo que usa la zona de influencia modelada de priorizacion_volcanes_lodo.xlsx, son dos radios/métodos distintos y no intercambiables. Mapa de amenaza: Modelado de amenaza Q-LavHA COMPLETADO (Informe_flujos_Mayo2026, WP1.2.6, avance 100%) — mapa de probabilidad de propagación de flujo (Figura 1-107).",
+      "nombre": "Cacahual",
+      "imagenes": {
+        "mapa_ubicacion": {
+          "archivo": "./assets/mapas/cacahual/ubicacion.webp",
+          "pie": ""
+        },
+        "morfometria": {
+          "archivo": "./assets/mapas/cacahual/morfometria.webp",
+          "pie": "Morfometría de Cacahual: (a) mapa del DEM con la base y los ejes; (b) perfiles A-B y C-D."
+        }
+      },
+      "actualizado": "2026-10-27",
+      "morfometria": {
+        "clase": "Domo",
+        "clase_calculada": "Cono",
+        "origen_clase": "usuario",
+        "tamano": "Grande",
+        "dmax_m": 2959,
+        "dmin_m": 2107,
+        "dmean_m": 2533,
+        "altura_m": 84.3,
+        "hr": 0.067,
+        "arctan_hr_grados": 3.8,
+        "pendiente_dem_grados": 8.1,
+        "azimuts_interpolados": 17,
+        "pct_azimuts_interpolados": 0.14,
+        "base_poco_fiable": false,
+        "hr_alto_segun_articulo": true,
+        "bsr": 0.712,
+        "dem": "sub_uraba1.tif",
+        "sb_km2_circulo": 5.041,
+        "v_cono_km3": 0.1376,
+        "fuente": "Napoli et al. (2025); morfometria_clasificacion.xlsx"
+      }
+    },
+    "isla_el_encanto_damaquiel": {
+      "municipio": "San Juan de Urabá",
+      "nombre_principal": "Isla El Encanto (Damaquiel)",
+      "altitud_msnm": 0,
+      "tipo": "Tipo I",
+      "estado_actividad": "Sin clasificación oficial publicada disponible para este volcán específico en las fuentes consultadas.",
+      "ultima_erupcion_texto": "No se encontró un evento documentado específico para este volcán en la bibliografía y prensa revisadas.",
+      "red_monitoreo": "No cuenta con una red instrumental de monitoreo sísmico ni geodésico (GPS) específica.",
+      "afectaciones": {
+        "construcciones_500m": 0,
+        "construcciones_1km": 0,
+        "infraestructura_critica": "",
+        "poblacion": "",
+        "amenaza_texto": "Sin modelado de propagación de flujos para este volcán."
+      },
+      "notas_internas": "Altitud en el documento: 0 m.s.n.m a 1km de costa.\nContexto regional sin vínculo confirmado: el 26 de febrero de 2026 se registró en el municipio de San Juan de Urabá un evento de columna de fuego y agrietamiento del terreno, explicado por el SGC como liberación de gases (metano) por diapirismo de lodo, y aclarado explícitamente como distinto de una erupción volcánica magmática (Infobae, 26-feb-2026). Las fuentes de prensa consultadas no identifican un volcán específico de esta capa como el origen del evento, por lo que NO se vincula a este punto en particular sin verificación adicional.\nVías: PENDIENTE (misma capa E:\\, desconectada). Acueductos, redes eléctricas y aeropuertos: no existe ninguna capa de estos temas en el proyecto actualmente — se requiere que Emilio indique la fuente si existe.\nPENDIENTE — requiere la capa de viviendas (E:\\Cartografia_SAMA.gdb), actualmente desconectada. Nota: los conteos de viviendas ya calculados en priorizacion_volcanes_lodo.xlsx usan el polígono de área de influencia modelada de cada volcán, no anillos fijos de 500 m/1 km/2 km — son cifras distintas y no intercambiables.\nMapa de amenaza (texto original): No incluido en el modelado de amenaza Q-LavHA del Informe_flujos_Mayo2026 (7 volcanes priorizados: El Aburrido, Las Platas, Melito Alto, Pueblo Nuevo, Las Changas, Cacahual, Alto de Mulatos). Sin cartografía de amenaza específica identificada en las fuentes disponibles para este volcán.\nFuente: capa Construcciones_Afectadas cargada por Emilio (D:\\SAMA\\diapiros\\insumos_priorizacion\\Volcanes_Lodo_Uraba_20260910.gdb), distancia recta desde el punto del volcán (volcanes_lodo_pt) a cada polígono de construcción — NO es el mismo conteo que usa la zona de influencia modelada de priorizacion_volcanes_lodo.xlsx, son dos radios/métodos distintos y no intercambiables. Mapa de amenaza: No incluido en el modelado de amenaza Q-LavHA del Informe_flujos_Mayo2026 (7 volcanes priorizados: El Aburrido, Las Platas, Melito Alto, Pueblo Nuevo, Las Changas, Cacahual, Alto de Mulatos). Sin cartografía de amenaza específica identificada en las fuentes disponibles para este volcán.",
+      "nombre": "Isla El Encanto (Damaquiel)",
+      "imagenes": {
+        "mapa_ubicacion": {
+          "archivo": "./assets/mapas/isla_el_encanto_damaquiel/ubicacion.webp",
+          "pie": ""
+        }
+      },
+      "actualizado": "2026-10-27"
+    },
+    "arboletes": {
+      "municipio": "Arboletes",
+      "nombre_principal": "Arboletes",
+      "altitud_msnm": 5,
+      "tipo": "Tipo II",
+      "estado_actividad": "Sin clasificación oficial publicada disponible para este volcán específico en las fuentes consultadas.",
+      "ultima_erupcion_texto": "No se encontró un evento documentado específico para este volcán en la bibliografía y prensa revisadas.",
+      "red_monitoreo": "No cuenta con una red instrumental de monitoreo sísmico ni geodésico (GPS) específica.",
+      "afectaciones": {
+        "construcciones_500m": 1,
+        "construcciones_1km": 1,
+        "amenaza_texto": "Baja - Turístico."
+      },
+      "notas_internas": "Mapa de amenaza (texto original): Baja - Turístico.\nFuente: capa Construcciones_Afectadas cargada por Emilio (D:\\SAMA\\diapiros\\insumos_priorizacion\\Volcanes_Lodo_Uraba_20260910.gdb), distancia recta desde el punto del volcán (volcanes_lodo_pt) a cada polígono de construcción — NO es el mismo conteo que usa la zona de influencia modelada de priorizacion_volcanes_lodo.xlsx, son dos radios/métodos distintos y no intercambiables. Mapa de amenaza: Baja - Turístico.\nMorfometría: La base invade la zona sin dato del mar: no citar área ni volumen. H de ~15 m es razonable.",
+      "nombre": "Arboletes",
+      "imagenes": {
+        "mapa_ubicacion": {
+          "archivo": "./assets/mapas/arboletes/ubicacion.webp",
+          "pie": ""
+        },
+        "morfometria": {
+          "archivo": "./assets/mapas/arboletes/morfometria.webp",
+          "pie": "Morfometría de Arboletes: (a) mapa del DEM con la base y los ejes; (b) perfiles A-B y C-D."
+        }
+      },
+      "actualizado": "2026-10-27",
+      "morfometria": {
+        "clase": "Pastel",
+        "clase_calculada": "Domo",
+        "origen_clase": "usuario",
+        "tamano": "Mediano",
+        "dmax_m": 1046,
+        "dmin_m": 576,
+        "dmean_m": 811,
+        "altura_m": 14.7,
+        "hr": 0.036,
+        "arctan_hr_grados": 2.1,
+        "pendiente_dem_grados": 3.1,
+        "azimuts_interpolados": 52,
+        "pct_azimuts_interpolados": 0.43,
+        "base_poco_fiable": false,
+        "hr_alto_segun_articulo": false,
+        "bsr": 0.551,
+        "dem": "Servicio-10186.tif",
+        "sb_km2_circulo": 0.517,
+        "v_cono_km3": 0.0023,
+        "fuente": "Napoli et al. (2025); morfometria_clasificacion.xlsx"
+      }
+    },
+    "virgen_del_cobre": {
+      "municipio": "Necoclí",
+      "nombre_principal": "Virgen del Cobre",
+      "altitud_msnm": 51,
+      "tipo": "Tipo II",
+      "estado_actividad": "Sin clasificación oficial publicada disponible para este volcán específico en las fuentes consultadas.",
+      "ultima_erupcion_texto": "No se encontró un evento documentado específico para este volcán en la bibliografía y prensa revisadas.",
+      "red_monitoreo": "No cuenta con una red instrumental de monitoreo sísmico ni geodésico (GPS) específica.",
+      "afectaciones": {
+        "construcciones_500m": 0,
+        "construcciones_1km": 0
+      },
+      "notas_internas": "Fuente: capa Construcciones_Afectadas cargada por Emilio (D:\\SAMA\\diapiros\\insumos_priorizacion\\Volcanes_Lodo_Uraba_20260910.gdb), distancia recta desde el punto del volcán (volcanes_lodo_pt) a cada polígono de construcción — NO es el mismo conteo que usa la zona de influencia modelada de priorizacion_volcanes_lodo.xlsx, son dos radios/métodos distintos y no intercambiables. Mapa de amenaza:\nMorfometría: Base radial unas 7 veces la zona de influencia.",
+      "nombre": "Virgen del Cobre",
+      "imagenes": {
+        "mapa_ubicacion": {
+          "archivo": "./assets/mapas/virgen_del_cobre/ubicacion.webp",
+          "pie": ""
+        },
+        "morfometria": {
+          "archivo": "./assets/mapas/virgen_del_cobre/morfometria.webp",
+          "pie": "Morfometría de Virgen del Cobre: (a) mapa del DEM con la base y los ejes; (b) perfiles A-B y C-D."
+        }
+      },
+      "actualizado": "2026-10-27",
+      "morfometria": {
+        "clase": "Pastel",
+        "clase_calculada": "Cono",
+        "origen_clase": "usuario",
+        "tamano": "Mediano",
+        "dmax_m": 1023,
+        "dmin_m": 818,
+        "dmean_m": 920,
+        "altura_m": 24.2,
+        "hr": 0.052,
+        "arctan_hr_grados": 3,
+        "pendiente_dem_grados": 4.5,
+        "azimuts_interpolados": 42,
+        "pct_azimuts_interpolados": 0.35,
+        "base_poco_fiable": false,
+        "hr_alto_segun_articulo": false,
+        "bsr": 0.8,
+        "dem": "sub_uraba1.tif",
+        "sb_km2_circulo": 0.665,
+        "v_cono_km3": 0.0053,
+        "fuente": "Napoli et al. (2025); morfometria_clasificacion.xlsx"
+      }
+    },
+    "melito_alto": {
+      "municipio": "Necoclí",
+      "nombre_principal": "Mellito AltoT",
+      "altitud_msnm": 118,
+      "tipo": "Tipo II",
+      "comportamiento_flujo": "",
+      "estado_actividad": "Con antecedente de erupción documentado (ver evento abajo); sin clasificación oficial de estado actual (activo/latente/extinto) publicada para este volcán.",
+      "ultima_erupcion_texto": "Erupción documentada en 2016 (sin fecha exacta reportada): el lodo presentó clastos de gran tamaño (fragmentos de roca arrastrados por la matriz de lodo) y alta presión de metano, lo que generó una salida con mucha energía inicial (Informe_flujos_Mayo2026, según caracterización técnica [2] citada allí).",
+      "red_monitoreo": "No cuenta con una red instrumental de monitoreo sísmico ni geodésico (GPS) específica.",
+      "afectaciones": {
+        "construcciones_500m": 70,
+        "construcciones_1km": 167,
+        "infraestructura_critica": "",
+        "poblacion": "",
+        "amenaza_texto": "Modelado de propagación de flujos de lodo (Q-LavHA) disponible: mapa de probabilidad de propagación."
+      },
+      "notas_internas": "Según el Informe_flujos_Mayo2026 (que lo refiere como 'Melito Alto' — mismo volcán, grafía distinta a la de la capa volcanes_lodo_pt), a diferencia de otros volcanes con dispersión radial, la simulación muestra un control topográfico severo: el flujo se comporta de forma casi lineal encajonado, lo que le permite alcanzar mayores distancias longitudinales sin perder energía por expansión lateral. El flujo comienza a ensancharse donde la pendiente disminuye y el lodo se seca y se vuelve más viscoso.\nVías: PENDIENTE (misma capa E:\\, desconectada). Acueductos, redes eléctricas y aeropuertos: no existe ninguna capa de estos temas en el proyecto actualmente — se requiere que Emilio indique la fuente si existe.\nPENDIENTE — requiere la capa de viviendas (E:\\Cartografia_SAMA.gdb), actualmente desconectada. Nota: los conteos de viviendas ya calculados en priorizacion_volcanes_lodo.xlsx usan el polígono de área de influencia modelada de cada volcán, no anillos fijos de 500 m/1 km/2 km — son cifras distintas y no intercambiables.\nMapa de amenaza (texto original): Modelado de amenaza Q-LavHA COMPLETADO (Informe_flujos_Mayo2026, WP1.2.6, avance 100%) — mapa de probabilidad de propagación de flujo (Figura 1-104).\nFuente: capa Construcciones_Afectadas cargada por Emilio (D:\\SAMA\\diapiros\\insumos_priorizacion\\Volcanes_Lodo_Uraba_20260910.gdb), distancia recta desde el punto del volcán (volcanes_lodo_pt) a cada polígono de construcción — NO es el mismo conteo que usa la zona de influencia modelada de priorizacion_volcanes_lodo.xlsx, son dos radios/métodos distintos y no intercambiables. Mapa de amenaza: Modelado de amenaza Q-LavHA COMPLETADO (Informe_flujos_Mayo2026, WP1.2.6, avance 100%) — mapa de probabilidad de propagación de flujo (Figura 1-104).\nMorfometría: Nombres distintos entre capas (punto 'Mellito AltoT', cráter 'Mellito Alto', zona 'Melito Alto').",
+      "nombre": "Mellito AltoT",
+      "imagenes": {
+        "mapa_ubicacion": {
+          "archivo": "./assets/mapas/melito_alto/ubicacion.webp",
+          "pie": ""
+        },
+        "morfometria": {
+          "archivo": "./assets/mapas/melito_alto/morfometria.webp",
+          "pie": "Morfometría de Mellito AltoT: (a) mapa del DEM con la base y los ejes; (b) perfiles A-B y C-D."
+        }
+      },
+      "actualizado": "2026-10-27",
+      "morfometria": {
+        "clase": "Domo",
+        "clase_calculada": "Cono",
+        "origen_clase": "usuario",
+        "tamano": "Grande",
+        "dmax_m": 1702,
+        "dmin_m": 1237,
+        "dmean_m": 1470,
+        "altura_m": 46,
+        "hr": 0.063,
+        "arctan_hr_grados": 3.6,
+        "pendiente_dem_grados": 6.2,
+        "azimuts_interpolados": 2,
+        "pct_azimuts_interpolados": 0.02,
+        "base_poco_fiable": false,
+        "hr_alto_segun_articulo": true,
+        "bsr": 0.727,
+        "dem": "sub_uraba1.tif",
+        "sb_km2_circulo": 1.696,
+        "v_cono_km3": 0.0254,
+        "fuente": "Napoli et al. (2025); morfometria_clasificacion.xlsx"
+      }
+    },
+    "giganton": {
+      "municipio": "Necoclí",
+      "nombre_principal": "Giganton",
+      "altitud_msnm": 74,
+      "tipo": "Tipo II",
+      "estado_actividad": "Sin clasificación oficial publicada disponible para este volcán específico en las fuentes consultadas.",
+      "ultima_erupcion_texto": "No se encontró un evento documentado específico para este volcán en la bibliografía y prensa revisadas.",
+      "red_monitoreo": "No cuenta con una red instrumental de monitoreo sísmico ni geodésico (GPS) específica.",
+      "afectaciones": {
+        "construcciones_500m": 1,
+        "construcciones_1km": 1
+      },
+      "notas_internas": "Fuente: capa Construcciones_Afectadas cargada por Emilio (D:\\SAMA\\diapiros\\insumos_priorizacion\\Volcanes_Lodo_Uraba_20260910.gdb), distancia recta desde el punto del volcán (volcanes_lodo_pt) a cada polígono de construcción — NO es el mismo conteo que usa la zona de influencia modelada de priorizacion_volcanes_lodo.xlsx, son dos radios/métodos distintos y no intercambiables. Mapa de amenaza:\nMorfometría: H de 12 m y base apoyada sobre todo en azimuts interpolados.",
+      "nombre": "Giganton",
+      "imagenes": {
+        "mapa_ubicacion": {
+          "archivo": "./assets/mapas/giganton/ubicacion.webp",
+          "pie": ""
+        },
+        "morfometria": {
+          "archivo": "./assets/mapas/giganton/morfometria.webp",
+          "pie": "Morfometría de Giganton: (a) mapa del DEM con la base y los ejes; (b) perfiles A-B y C-D."
+        }
+      },
+      "actualizado": "2026-10-27",
+      "morfometria": {
+        "clase": "Domo",
+        "clase_calculada": "Pastel",
+        "origen_clase": "usuario",
+        "tamano": "Pequeño",
+        "dmax_m": 676,
+        "dmin_m": 489,
+        "dmean_m": 582,
+        "altura_m": 12.1,
+        "hr": 0.041,
+        "arctan_hr_grados": 2.4,
+        "pendiente_dem_grados": 4.8,
+        "azimuts_interpolados": 72,
+        "pct_azimuts_interpolados": 0.6,
+        "base_poco_fiable": false,
+        "hr_alto_segun_articulo": false,
+        "bsr": 0.723,
+        "dem": "sub_uraba1.tif",
+        "sb_km2_circulo": 0.266,
+        "v_cono_km3": 0.001,
+        "fuente": "Napoli et al. (2025); morfometria_clasificacion.xlsx"
+      }
+    },
+    "candelaria": {
+      "municipio": "Arboletes",
+      "nombre_principal": "Candelaria",
+      "altitud_msnm": 92,
+      "tipo": "Tipo II",
+      "estado_actividad": "Sin clasificación oficial publicada disponible para este volcán específico en las fuentes consultadas.",
+      "ultima_erupcion_texto": "No se encontró un evento documentado específico para este volcán en la bibliografía y prensa revisadas.",
+      "red_monitoreo": "No cuenta con una red instrumental de monitoreo sísmico ni geodésico (GPS) específica.",
+      "afectaciones": {
+        "construcciones_500m": 2,
+        "construcciones_1km": 2
+      },
+      "notas_internas": "Fuente: capa Construcciones_Afectadas cargada por Emilio (D:\\SAMA\\diapiros\\insumos_priorizacion\\Volcanes_Lodo_Uraba_20260910.gdb), distancia recta desde el punto del volcán (volcanes_lodo_pt) a cada polígono de construcción — NO es el mismo conteo que usa la zona de influencia modelada de priorizacion_volcanes_lodo.xlsx, son dos radios/métodos distintos y no intercambiables. Mapa de amenaza:\nMorfometría: Base lobulada con un cuello al noroeste. Clase dejada como calculada por decisión del usuario.",
+      "nombre": "Candelaria",
+      "imagenes": {
+        "mapa_ubicacion": {
+          "archivo": "./assets/mapas/candelaria/ubicacion.webp",
+          "pie": ""
+        },
+        "morfometria": {
+          "archivo": "./assets/mapas/candelaria/morfometria.webp",
+          "pie": "Morfometría de Candelaria: (a) mapa del DEM con la base y los ejes; (b) perfiles A-B y C-D."
+        }
+      },
+      "actualizado": "2026-10-27",
+      "morfometria": {
+        "clase": "Domo",
+        "clase_calculada": "Domo",
+        "origen_clase": "usuario",
+        "tamano": "Grande",
+        "dmax_m": 1797,
+        "dmin_m": 1103,
+        "dmean_m": 1450,
+        "altura_m": 35.1,
+        "hr": 0.048,
+        "arctan_hr_grados": 2.8,
+        "pendiente_dem_grados": 5.6,
+        "azimuts_interpolados": 9,
+        "pct_azimuts_interpolados": 0.07,
+        "base_poco_fiable": false,
+        "hr_alto_segun_articulo": false,
+        "bsr": 0.614,
+        "dem": "Servicio-10186.tif",
+        "sb_km2_circulo": 1.651,
+        "v_cono_km3": 0.0182,
+        "fuente": "Napoli et al. (2025); morfometria_clasificacion.xlsx"
+      }
+    },
+    "manuel_cuello": {
+      "municipio": "Turbo",
+      "nombre_principal": "Manuel Cuello",
+      "altitud_msnm": 42,
+      "tipo": "Tipo II",
+      "estado_actividad": "Sin clasificación oficial publicada disponible para este volcán específico en las fuentes consultadas.",
+      "ultima_erupcion_texto": "No se encontró un evento documentado específico para este volcán en la bibliografía y prensa revisadas.",
+      "red_monitoreo": "No cuenta con una red instrumental de monitoreo sísmico ni geodésico (GPS) específica.",
+      "afectaciones": {
+        "construcciones_500m": 0,
+        "construcciones_1km": 0
+      },
+      "notas_internas": "Fuente: capa Construcciones_Afectadas cargada por Emilio (D:\\SAMA\\diapiros\\insumos_priorizacion\\Volcanes_Lodo_Uraba_20260910.gdb), distancia recta desde el punto del volcán (volcanes_lodo_pt) a cada polígono de construcción — NO es el mismo conteo que usa la zona de influencia modelada de priorizacion_volcanes_lodo.xlsx, son dos radios/métodos distintos y no intercambiables. Mapa de amenaza:\nMorfometría: H de 6 m: edificio apenas resuelto por el DEM.",
+      "nombre": "Manuel Cuello",
+      "imagenes": {
+        "mapa_ubicacion": {
+          "archivo": "./assets/mapas/manuel_cuello/ubicacion.webp",
+          "pie": ""
+        },
+        "morfometria": {
+          "archivo": "./assets/mapas/manuel_cuello/morfometria.webp",
+          "pie": "Morfometría de Manuel Cuello: (a) mapa del DEM con la base y los ejes; (b) perfiles A-B y C-D."
+        }
+      },
+      "actualizado": "2026-10-27",
+      "morfometria": {
+        "clase": "Pastel",
+        "clase_calculada": "Pastel",
+        "origen_clase": "usuario",
+        "tamano": "Mediano",
+        "dmax_m": 1037,
+        "dmin_m": 657,
+        "dmean_m": 847,
+        "altura_m": 6,
+        "hr": 0.014,
+        "arctan_hr_grados": 0.8,
+        "pendiente_dem_grados": 3.9,
+        "azimuts_interpolados": 65,
+        "pct_azimuts_interpolados": 0.54,
+        "base_poco_fiable": false,
+        "hr_alto_segun_articulo": false,
+        "bsr": 0.634,
+        "dem": "sub_uraba1.tif",
+        "sb_km2_circulo": 0.563,
+        "v_cono_km3": 0.0011,
+        "fuente": "Napoli et al. (2025); morfometria_clasificacion.xlsx"
+      }
+    },
+    "san_felipe": {
+      "municipio": "Turbo",
+      "nombre_principal": "San Felipe",
+      "altitud_msnm": 85,
+      "tipo": "Tipo II",
+      "estado_actividad": "Sin clasificación oficial publicada disponible para este volcán específico en las fuentes consultadas.",
+      "ultima_erupcion_texto": "No se encontró un evento documentado específico para este volcán en la bibliografía y prensa revisadas.",
+      "red_monitoreo": "No cuenta con una red instrumental de monitoreo sísmico ni geodésico (GPS) específica.",
+      "afectaciones": {
+        "construcciones_500m": 0,
+        "construcciones_1km": 0
+      },
+      "notas_internas": "Fuente: capa Construcciones_Afectadas cargada por Emilio (D:\\SAMA\\diapiros\\insumos_priorizacion\\Volcanes_Lodo_Uraba_20260910.gdb), distancia recta desde el punto del volcán (volcanes_lodo_pt) a cada polígono de construcción — NO es el mismo conteo que usa la zona de influencia modelada de priorizacion_volcanes_lodo.xlsx, son dos radios/métodos distintos y no intercambiables. Mapa de amenaza:\nMorfometría: Sin cráter digitalizado: la cumbre es el máximo del DEM a <= 250 m del punto.",
+      "nombre": "San Felipe",
+      "imagenes": {
+        "mapa_ubicacion": {
+          "archivo": "./assets/mapas/san_felipe/ubicacion.webp",
+          "pie": ""
+        },
+        "morfometria": {
+          "archivo": "./assets/mapas/san_felipe/morfometria.webp",
+          "pie": "Morfometría de San Felipe: (a) mapa del DEM con la base y los ejes; (b) perfiles A-B y C-D."
+        }
+      },
+      "actualizado": "2026-10-27",
+      "morfometria": {
+        "clase": "Domo",
+        "clase_calculada": "Cono",
+        "origen_clase": "usuario",
+        "tamano": "Mediano",
+        "dmax_m": 860,
+        "dmin_m": 766,
+        "dmean_m": 813,
+        "altura_m": 37.8,
+        "hr": 0.093,
+        "arctan_hr_grados": 5.3,
+        "pendiente_dem_grados": 10.7,
+        "azimuts_interpolados": 71,
+        "pct_azimuts_interpolados": 0.59,
+        "base_poco_fiable": false,
+        "hr_alto_segun_articulo": true,
+        "bsr": 0.891,
+        "dem": "sub_uraba1.tif",
+        "sb_km2_circulo": 0.519,
+        "v_cono_km3": 0.0065,
+        "fuente": "Napoli et al. (2025); morfometria_clasificacion.xlsx"
+      }
+    },
+    "pueblo_nuevo": {
+      "municipio": "Necoclí",
+      "nombre_principal": "Pueblo Nuevo",
+      "altitud_msnm": 148,
+      "tipo": "Tipo II",
+      "comportamiento_flujo": "A diferencia de un volcán de planicie, está influenciado por colinas bajas; el flujo sigue un eje principal, manteniendo la energía cinética por más tiempo y alcanzando distancias mayores que si se expandiera en abanico. Los procesos de subsidencia tras una erupción cambian la topografía de cara a futuras simulaciones.",
+      "estado_actividad": "Sin clasificación oficial publicada disponible para este volcán específico en las fuentes consultadas.",
+      "ultima_erupcion_texto": "No se encontró un evento documentado específico para este volcán en la bibliografía y prensa revisadas.",
+      "red_monitoreo": "No cuenta con una red instrumental de monitoreo sísmico ni geodésico (GPS) específica.",
+      "afectaciones": {
+        "construcciones_500m": 2,
+        "construcciones_1km": 13,
+        "infraestructura_critica": "",
+        "amenaza_texto": "Modelado de propagación de flujos de lodo (Q-LavHA) disponible: mapa de probabilidad de propagación."
+      },
+      "notas_internas": "Según el Informe_flujos_Mayo2026, presenta concentración máxima de probabilidad de flujo en el cráter central: en caso de erupción, el lodo no se dispersa radialmente de forma uniforme, sino que busca de inmediato la línea de máxima pendiente.\nMapa de amenaza (texto original): Modelado de amenaza Q-LavHA COMPLETADO (Informe_flujos_Mayo2026, WP1.2.6, avance 100%) — mapa de probabilidad de propagación de flujo (Figura 1-105).\nFuente: capa Construcciones_Afectadas cargada por Emilio (D:\\SAMA\\diapiros\\insumos_priorizacion\\Volcanes_Lodo_Uraba_20260910.gdb), distancia recta desde el punto del volcán (volcanes_lodo_pt) a cada polígono de construcción — NO es el mismo conteo que usa la zona de influencia modelada de priorizacion_volcanes_lodo.xlsx, son dos radios/métodos distintos y no intercambiables. Mapa de amenaza: Modelado de amenaza Q-LavHA COMPLETADO (Informe_flujos_Mayo2026, WP1.2.6, avance 100%) — mapa de probabilidad de propagación de flujo (Figura 1-105).",
+      "nombre": "Pueblo Nuevo",
+      "imagenes": {
+        "mapa_ubicacion": {
+          "archivo": "./assets/mapas/pueblo_nuevo/ubicacion.webp",
+          "pie": ""
+        },
+        "morfometria": {
+          "archivo": "./assets/mapas/pueblo_nuevo/morfometria.webp",
+          "pie": "Morfometría de Pueblo Nuevo: (a) mapa del DEM con la base y los ejes; (b) perfiles A-B y C-D."
+        }
+      },
+      "actualizado": "2026-10-27",
+      "morfometria": {
+        "clase": "Cono",
+        "clase_calculada": "Cono",
+        "origen_clase": "usuario",
+        "tamano": "Grande",
+        "dmax_m": 2734,
+        "dmin_m": 2171,
+        "dmean_m": 2453,
+        "altura_m": 77.1,
+        "hr": 0.063,
+        "arctan_hr_grados": 3.6,
+        "pendiente_dem_grados": 5.5,
+        "azimuts_interpolados": 3,
+        "pct_azimuts_interpolados": 0.03,
+        "base_poco_fiable": false,
+        "hr_alto_segun_articulo": false,
+        "bsr": 0.794,
+        "dem": "sub_uraba1.tif",
+        "sb_km2_circulo": 4.725,
+        "v_cono_km3": 0.1198,
+        "fuente": "Napoli et al. (2025); morfometria_clasificacion.xlsx"
+      }
+    },
+    "el_carlo": {
+      "municipio": "Necoclí",
+      "nombre_principal": "El Carlo",
+      "altitud_msnm": 26,
+      "tipo": "Tipo II",
+      "estado_actividad": "Sin clasificación oficial publicada disponible para este volcán específico en las fuentes consultadas.",
+      "ultima_erupcion_texto": "No se encontró un evento documentado específico para este volcán en la bibliografía y prensa revisadas.",
+      "red_monitoreo": "No cuenta con una red instrumental de monitoreo sísmico ni geodésico (GPS) específica.",
+      "afectaciones": {
+        "construcciones_500m": 0,
+        "construcciones_1km": 0,
+        "infraestructura_critica": ""
+      },
+      "notas_internas": "Fuente: capa Construcciones_Afectadas cargada por Emilio (D:\\SAMA\\diapiros\\insumos_priorizacion\\Volcanes_Lodo_Uraba_20260910.gdb), distancia recta desde el punto del volcán (volcanes_lodo_pt) a cada polígono de construcción — NO es el mismo conteo que usa la zona de influencia modelada de priorizacion_volcanes_lodo.xlsx, son dos radios/métodos distintos y no intercambiables. Mapa de amenaza:\nMorfometría: Sin edificio visible en el DEM de 10 m (H de 3 m): la clase no tiene sentido.",
+      "nombre": "El Carlo",
+      "imagenes": {
+        "mapa_ubicacion": {
+          "archivo": "./assets/mapas/el_carlo/ubicacion.webp",
+          "pie": ""
+        },
+        "morfometria": {
+          "archivo": "./assets/mapas/el_carlo/morfometria.webp",
+          "pie": "Morfometría de El Carlo: (a) mapa del DEM con la base y los ejes; (b) perfiles A-B y C-D."
+        }
+      },
+      "actualizado": "2026-10-27",
+      "morfometria": {
+        "clase": "Pastel",
+        "clase_calculada": "Domo",
+        "origen_clase": "usuario",
+        "tamano": "Mediano",
+        "dmax_m": 1117,
+        "dmin_m": 740,
+        "dmean_m": 928,
+        "altura_m": 3.1,
+        "hr": 0.007,
+        "arctan_hr_grados": 0.4,
+        "pendiente_dem_grados": 2.8,
+        "azimuts_interpolados": 70,
+        "pct_azimuts_interpolados": 0.58,
+        "base_poco_fiable": false,
+        "hr_alto_segun_articulo": false,
+        "bsr": 0.663,
+        "dem": "sub_uraba1.tif",
+        "sb_km2_circulo": 0.677,
+        "v_cono_km3": 0.0007,
+        "fuente": "Napoli et al. (2025); morfometria_clasificacion.xlsx"
+      }
+    },
+    "las_changas": {
+      "municipio": "Necoclí",
+      "nombre_principal": "Las Changas",
+      "altitud_msnm": 174,
+      "tipo": "Tipo II",
+      "comportamiento_flujo": "Según el Informe_flujos_Mayo2026, muestra un comportamiento de flujo direccional muy marcado, condicionado por la profundidad de los valles: en caso de erupción, el lodo tiende a seguir el drenaje natural, recorriendo grandes distancias en vez de quedarse cerca del cráter. Factores a vigilar: presión de poros y gases (especialmente metano), cuya expansión empuja el lodo fuera del cráter en un evento mayor; la simulación asume volumen constante, pero en la realidad el flujo puede ser pulsante. El lodo diapírico es altamente salino: las zonas afectadas no solo sufren daño físico por el paso del lodo, sino que quedan estériles químicamente por un período prolongado debido a la alta concentración de cloruros.",
+      "estado_actividad": "Sin clasificación oficial publicada disponible para este volcán específico en las fuentes consultadas.",
+      "ultima_erupcion_texto": "No se encontró un evento documentado específico para este volcán en la bibliografía y prensa revisadas.",
+      "red_monitoreo": "No cuenta con una red instrumental de monitoreo sísmico ni geodésico (GPS) específica.",
+      "afectaciones": {
+        "construcciones_500m": 247,
+        "construcciones_1km": 471,
+        "amenaza_texto": "Modelado de propagación de flujos de lodo (Q-LavHA) disponible: mapa de probabilidad de propagación."
+      },
+      "notas_internas": "Mapa de amenaza (texto original): Modelado de amenaza Q-LavHA COMPLETADO (Informe_flujos_Mayo2026, WP1.2.6, avance 100%) — mapa de probabilidad de propagación de flujo (Figura 1-106).\nFuente: capa Construcciones_Afectadas cargada por Emilio (D:\\SAMA\\diapiros\\insumos_priorizacion\\Volcanes_Lodo_Uraba_20260910.gdb), distancia recta desde el punto del volcán (volcanes_lodo_pt) a cada polígono de construcción — NO es el mismo conteo que usa la zona de influencia modelada de priorizacion_volcanes_lodo.xlsx, son dos radios/métodos distintos y no intercambiables. Mapa de amenaza: Modelado de amenaza Q-LavHA COMPLETADO (Informe_flujos_Mayo2026, WP1.2.6, avance 100%) — mapa de probabilidad de propagación de flujo (Figura 1-106).",
+      "nombre": "Las Changas",
+      "imagenes": {
+        "mapa_ubicacion": {
+          "archivo": "./assets/mapas/las_changas/ubicacion.webp",
+          "pie": ""
+        },
+        "morfometria": {
+          "archivo": "./assets/mapas/las_changas/morfometria.webp",
+          "pie": "Morfometría de Las Changas: (a) mapa del DEM con la base y los ejes; (b) perfiles A-B y C-D."
+        }
+      },
+      "actualizado": "2026-10-27",
+      "morfometria": {
+        "clase": "Cono",
+        "clase_calculada": "Cono",
+        "origen_clase": "usuario",
+        "tamano": "Grande",
+        "dmax_m": 2657,
+        "dmin_m": 2091,
+        "dmean_m": 2374,
+        "altura_m": 80,
+        "hr": 0.067,
+        "arctan_hr_grados": 3.9,
+        "pendiente_dem_grados": 7.2,
+        "azimuts_interpolados": 9,
+        "pct_azimuts_interpolados": 0.07,
+        "base_poco_fiable": false,
+        "hr_alto_segun_articulo": false,
+        "bsr": 0.787,
+        "dem": "sub_uraba1.tif",
+        "sb_km2_circulo": 4.425,
+        "v_cono_km3": 0.1163,
+        "fuente": "Napoli et al. (2025); morfometria_clasificacion.xlsx"
+      }
+    },
+    "santa_rosa_palmares": {
+      "municipio": "Necoclí",
+      "nombre_principal": "Santa Rosa de los Palmares",
+      "altitud_msnm": 193,
+      "tipo": "Tipo II",
+      "estado_actividad": "Sin clasificación oficial publicada disponible para este volcán específico en las fuentes consultadas.",
+      "ultima_erupcion_texto": "No se encontró un evento documentado específico para este volcán en la bibliografía y prensa revisadas.",
+      "red_monitoreo": "No cuenta con una red instrumental de monitoreo sísmico ni geodésico (GPS) específica.",
+      "afectaciones": {
+        "construcciones_500m": 85,
+        "construcciones_1km": 192,
+        "infraestructura_critica": "",
+        "poblacion": "",
+        "amenaza_texto": "Sin modelado de propagación de flujos para este volcán."
+      },
+      "notas_internas": "Vías: PENDIENTE (misma capa E:\\, desconectada). Acueductos, redes eléctricas y aeropuertos: no existe ninguna capa de estos temas en el proyecto actualmente — se requiere que Emilio indique la fuente si existe.\nPENDIENTE — requiere la capa de viviendas (E:\\Cartografia_SAMA.gdb), actualmente desconectada. Nota: los conteos de viviendas ya calculados en priorizacion_volcanes_lodo.xlsx usan el polígono de área de influencia modelada de cada volcán, no anillos fijos de 500 m/1 km/2 km — son cifras distintas y no intercambiables.\nMapa de amenaza (texto original): No incluido en el modelado de amenaza Q-LavHA del Informe_flujos_Mayo2026 (7 volcanes priorizados: El Aburrido, Las Platas, Melito Alto, Pueblo Nuevo, Las Changas, Cacahual, Alto de Mulatos). Sin cartografía de amenaza específica identificada en las fuentes disponibles para este volcán.\nFuente: capa Construcciones_Afectadas cargada por Emilio (D:\\SAMA\\diapiros\\insumos_priorizacion\\Volcanes_Lodo_Uraba_20260910.gdb), distancia recta desde el punto del volcán (volcanes_lodo_pt) a cada polígono de construcción — NO es el mismo conteo que usa la zona de influencia modelada de priorizacion_volcanes_lodo.xlsx, son dos radios/métodos distintos y no intercambiables. Mapa de amenaza: No incluido en el modelado de amenaza Q-LavHA del Informe_flujos_Mayo2026 (7 volcanes priorizados: El Aburrido, Las Platas, Melito Alto, Pueblo Nuevo, Las Changas, Cacahual, Alto de Mulatos). Sin cartografía de amenaza específica identificada en las fuentes disponibles para este volcán.",
+      "nombre": "Santa Rosa de los Palmares",
+      "imagenes": {
+        "mapa_ubicacion": {
+          "archivo": "./assets/mapas/santa_rosa_palmares/ubicacion.webp",
+          "pie": ""
+        },
+        "morfometria": {
+          "archivo": "./assets/mapas/santa_rosa_palmares/morfometria.webp",
+          "pie": "Morfometría de Santa Rosa de los Palmares: (a) mapa del DEM con la base y los ejes; (b) perfiles A-B y C-D."
+        }
+      },
+      "actualizado": "2026-10-27",
+      "morfometria": {
+        "clase": "Cono",
+        "clase_calculada": "Cono",
+        "origen_clase": "usuario",
+        "tamano": "Grande",
+        "dmax_m": 2707,
+        "dmin_m": 2149,
+        "dmean_m": 2428,
+        "altura_m": 68.7,
+        "hr": 0.057,
+        "arctan_hr_grados": 3.2,
+        "pendiente_dem_grados": 6.9,
+        "azimuts_interpolados": 11,
+        "pct_azimuts_interpolados": 0.09,
+        "base_poco_fiable": false,
+        "hr_alto_segun_articulo": false,
+        "bsr": 0.794,
+        "dem": "sub_uraba1.tif",
+        "sb_km2_circulo": 4.63,
+        "v_cono_km3": 0.1046,
+        "fuente": "Napoli et al. (2025); morfometria_clasificacion.xlsx"
+      }
+    },
+    "las_mercedes": {
+      "municipio": "Necoclí",
+      "nombre_principal": "Finca Las Mercedes",
+      "altitud_msnm": 69,
+      "estado_actividad": "Sin clasificación oficial publicada disponible para este volcán específico en las fuentes consultadas.",
+      "ultima_erupcion_texto": "No se encontró un evento documentado específico para este volcán en la bibliografía y prensa revisadas.",
+      "red_monitoreo": "No cuenta con una red instrumental de monitoreo sísmico ni geodésico (GPS) específica.",
+      "afectaciones": {
+        "construcciones_500m": 0,
+        "construcciones_1km": 0
+      },
+      "notas_internas": "Fuente: capa Construcciones_Afectadas cargada por Emilio (D:\\SAMA\\diapiros\\insumos_priorizacion\\Volcanes_Lodo_Uraba_20260910.gdb), distancia recta desde el punto del volcán (volcanes_lodo_pt) a cada polígono de construcción — NO es el mismo conteo que usa la zona de influencia modelada de priorizacion_volcanes_lodo.xlsx, son dos radios/métodos distintos y no intercambiables. Mapa de amenaza:\nMorfometría: El cráter se llama 'Finca Mercedes' en la capa de cráteres.",
+      "nombre": "Finca Las Mercedes",
+      "imagenes": {
+        "mapa_ubicacion": {
+          "archivo": "./assets/mapas/las_mercedes/ubicacion.webp",
+          "pie": ""
+        },
+        "morfometria": {
+          "archivo": "./assets/mapas/las_mercedes/morfometria.webp",
+          "pie": "Morfometría de Finca Las Mercedes: (a) mapa del DEM con la base y los ejes; (b) perfiles A-B y C-D."
+        }
+      },
+      "actualizado": "2026-10-27",
+      "morfometria": {
+        "clase": "Cono",
+        "clase_calculada": "Domo",
+        "origen_clase": "usuario",
+        "tamano": "Grande",
+        "dmax_m": 1750,
+        "dmin_m": 1179,
+        "dmean_m": 1464,
+        "altura_m": 36.3,
+        "hr": 0.05,
+        "arctan_hr_grados": 2.8,
+        "pendiente_dem_grados": 3.5,
+        "azimuts_interpolados": 4,
+        "pct_azimuts_interpolados": 0.03,
+        "base_poco_fiable": false,
+        "hr_alto_segun_articulo": false,
+        "bsr": 0.674,
+        "dem": "sub_uraba1.tif",
+        "sb_km2_circulo": 1.684,
+        "v_cono_km3": 0.0196,
+        "fuente": "Napoli et al. (2025); morfometria_clasificacion.xlsx"
+      }
+    },
+    "san_rafael": {
+      "municipio": "Necoclí",
+      "nombre_principal": "San Rafael",
+      "altitud_msnm": 190,
+      "estado_actividad": "Sin clasificación oficial publicada disponible para este volcán específico en las fuentes consultadas.",
+      "ultima_erupcion_texto": "No se encontró un evento documentado específico para este volcán en la bibliografía y prensa revisadas.",
+      "red_monitoreo": "No cuenta con una red instrumental de monitoreo sísmico ni geodésico (GPS) específica.",
+      "afectaciones": {
+        "construcciones_500m": 21,
+        "construcciones_1km": 38,
+        "poblacion": ".",
+        "amenaza_texto": "Sin modelado de propagación de flujos para este volcán."
+      },
+      "notas_internas": "Mapa de amenaza (texto original): No incluido en el modelado de amenaza Q-LavHA del Informe_flujos_Mayo2026 (7 volcanes priorizados: El Aburrido, Las Platas, Melito Alto, Pueblo Nuevo, Las Changas, Cacahual, Alto de Mulatos). Sin cartografía de amenaza específica identificada en las fuentes disponibles para este volcán.\nFuente: capa Construcciones_Afectadas cargada por Emilio (D:\\SAMA\\diapiros\\insumos_priorizacion\\Volcanes_Lodo_Uraba_20260910.gdb), distancia recta desde el punto del volcán (volcanes_lodo_pt) a cada polígono de construcción — NO es el mismo conteo que usa la zona de influencia modelada de priorizacion_volcanes_lodo.xlsx, son dos radios/métodos distintos y no intercambiables. Mapa de amenaza: No incluido en el modelado de amenaza Q-LavHA del Informe_flujos_Mayo2026 (7 volcanes priorizados: El Aburrido, Las Platas, Melito Alto, Pueblo Nuevo, Las Changas, Cacahual, Alto de Mulatos). Sin cartografía de amenaza específica identificada en las fuentes disponibles para este volcán.",
+      "nombre": "San Rafael",
+      "imagenes": {
+        "mapa_ubicacion": {
+          "archivo": "./assets/mapas/san_rafael/ubicacion.webp",
+          "pie": ""
+        },
+        "morfometria": {
+          "archivo": "./assets/mapas/san_rafael/morfometria.webp",
+          "pie": "Morfometría de San Rafael: (a) mapa del DEM con la base y los ejes; (b) perfiles A-B y C-D."
+        }
+      },
+      "actualizado": "2026-10-27",
+      "morfometria": {
+        "clase": "Cono",
+        "clase_calculada": "Cono",
+        "origen_clase": "usuario",
+        "tamano": "Grande",
+        "dmax_m": 2406,
+        "dmin_m": 1650,
+        "dmean_m": 2028,
+        "altura_m": 72.6,
+        "hr": 0.072,
+        "arctan_hr_grados": 4.1,
+        "pendiente_dem_grados": 8.5,
+        "azimuts_interpolados": 37,
+        "pct_azimuts_interpolados": 0.31,
+        "base_poco_fiable": false,
+        "hr_alto_segun_articulo": false,
+        "bsr": 0.686,
+        "dem": "sub_uraba1.tif",
+        "sb_km2_circulo": 3.229,
+        "v_cono_km3": 0.0755,
+        "fuente": "Napoli et al. (2025); morfometria_clasificacion.xlsx"
+      }
+    },
+    "cienaguita": {
+      "municipio": "Arboletes",
+      "nombre_principal": "Cienaguita",
+      "estado_actividad": "Sin clasificación oficial publicada disponible para este volcán específico en las fuentes consultadas.",
+      "ultima_erupcion_texto": "No se encontró un evento documentado específico para este volcán en la bibliografía y prensa revisadas.",
+      "red_monitoreo": "No cuenta con una red instrumental de monitoreo sísmico ni geodésico (GPS) específica.",
+      "afectaciones": {
+        "construcciones_500m": 2,
+        "construcciones_1km": 2,
+        "infraestructura_critica": ""
+      },
+      "notas_internas": "Fuente: capa Construcciones_Afectadas cargada por Emilio (D:\\SAMA\\diapiros\\insumos_priorizacion\\Volcanes_Lodo_Uraba_20260910.gdb), distancia recta desde el punto del volcán (volcanes_lodo_pt) a cada polígono de construcción — NO es el mismo conteo que usa la zona de influencia modelada de priorizacion_volcanes_lodo.xlsx, son dos radios/métodos distintos y no intercambiables. Mapa de amenaza:\nMorfometría: Montículo bajo sobre una meseta. Clase dejada como calculada por decisión del usuario.",
+      "nombre": "Cienaguita",
+      "imagenes": {
+        "mapa_ubicacion": {
+          "archivo": "./assets/mapas/cienaguita/ubicacion.webp",
+          "pie": ""
+        },
+        "morfometria": {
+          "archivo": "./assets/mapas/cienaguita/morfometria.webp",
+          "pie": "Morfometría de Cienaguita: (a) mapa del DEM con la base y los ejes; (b) perfiles A-B y C-D."
+        }
+      },
+      "actualizado": "2026-10-27",
+      "morfometria": {
+        "clase": "Domo",
+        "clase_calculada": "Domo",
+        "origen_clase": "usuario",
+        "tamano": "Grande",
+        "dmax_m": 1283,
+        "dmin_m": 1084,
+        "dmean_m": 1184,
+        "altura_m": 26.1,
+        "hr": 0.044,
+        "arctan_hr_grados": 2.5,
+        "pendiente_dem_grados": 4.2,
+        "azimuts_interpolados": 54,
+        "pct_azimuts_interpolados": 0.45,
+        "base_poco_fiable": false,
+        "hr_alto_segun_articulo": false,
+        "bsr": 0.844,
+        "dem": "Servicio-10186.tif",
+        "sb_km2_circulo": 1.1,
+        "v_cono_km3": 0.0095,
+        "fuente": "Napoli et al. (2025); morfometria_clasificacion.xlsx"
+      }
+    },
+    "finca_wendy": {
+      "municipio": "San Pedro de Urabá",
+      "nombre_principal": "Finca Wendy",
+      "altitud_msnm": 235,
+      "estado_actividad": "Sin clasificación oficial publicada disponible para este volcán específico en las fuentes consultadas.",
+      "ultima_erupcion_texto": "No se encontró un evento documentado específico para este volcán en la bibliografía y prensa revisadas.",
+      "red_monitoreo": "No cuenta con una red instrumental de monitoreo sísmico ni geodésico (GPS) específica.",
+      "afectaciones": {
+        "construcciones_500m": 0,
+        "construcciones_1km": 0
+      },
+      "notas_internas": "Fuente: capa Construcciones_Afectadas cargada por Emilio (D:\\SAMA\\diapiros\\insumos_priorizacion\\Volcanes_Lodo_Uraba_20260910.gdb), distancia recta desde el punto del volcán (volcanes_lodo_pt) a cada polígono de construcción — NO es el mismo conteo que usa la zona de influencia modelada de priorizacion_volcanes_lodo.xlsx, son dos radios/métodos distintos y no intercambiables. Mapa de amenaza:\nMorfometría: Edificio pequeño sobre ladera con una loma al este; la base radial es unas 7 veces la zona de influencia.",
+      "nombre": "Finca Wendy",
+      "imagenes": {
+        "mapa_ubicacion": {
+          "archivo": "./assets/mapas/finca_wendy/ubicacion.webp",
+          "pie": ""
+        },
+        "morfometria": {
+          "archivo": "./assets/mapas/finca_wendy/morfometria.webp",
+          "pie": "Morfometría de Finca Wendy: (a) mapa del DEM con la base y los ejes; (b) perfiles A-B y C-D."
+        }
+      },
+      "actualizado": "2026-10-27",
+      "morfometria": {
+        "clase": "Cono",
+        "clase_calculada": "Cono",
+        "origen_clase": "usuario",
+        "tamano": "Mediano",
+        "dmax_m": 1012,
+        "dmin_m": 692,
+        "dmean_m": 852,
+        "altura_m": 53.3,
+        "hr": 0.125,
+        "arctan_hr_grados": 7.1,
+        "pendiente_dem_grados": 9.5,
+        "azimuts_interpolados": 60,
+        "pct_azimuts_interpolados": 0.5,
+        "base_poco_fiable": false,
+        "hr_alto_segun_articulo": false,
+        "bsr": 0.684,
+        "dem": "MDS12_05665_20140316.tif",
+        "sb_km2_circulo": 0.57,
+        "v_cono_km3": 0.0098,
+        "fuente": "Napoli et al. (2025); morfometria_clasificacion.xlsx"
+      }
+    },
+    "volcan_vereda_molinillo": {
+      "municipio": "San Pedro de Urabá",
+      "nombre_principal": "Volcán Vereda Molinillo",
+      "altitud_msnm": 190,
+      "estado_actividad": "Sin clasificación oficial publicada disponible para este volcán específico en las fuentes consultadas.",
+      "ultima_erupcion_texto": "solo se conoce la registrada el 11 de agosto de 2026.",
+      "erupciones": [
+        {
+          "fecha": "2026-08-11",
+          "precision": "dia",
+          "descripcion": ""
+        }
+      ],
+      "red_monitoreo": "No cuenta con una red instrumental de monitoreo sísmico ni geodésico (GPS) específica.",
+      "afectaciones": {
+        "construcciones_500m": 3,
+        "construcciones_1km": 0,
+        "amenaza_texto": "Sin modelado de propagación de flujos para este volcán.",
+        "infraestructura_critica": "Vivienda abandonada"
+      },
+      "notas_internas": "Mapa de amenaza (texto original): No incluido en el modelado de amenaza Q-LavHA del Informe_flujos_Mayo2026 (7 volcanes priorizados: El Aburrido, Las Platas, Melito Alto, Pueblo Nuevo, Las Changas, Cacahual, Alto de Mulatos). Sin cartografía de amenaza específica identificada en las fuentes disponibles para este volcán.\nFuente: capa Construcciones_Afectadas cargada por Emilio (D:\\SAMA\\diapiros\\insumos_priorizacion\\Volcanes_Lodo_Uraba_20260910.gdb), distancia recta desde el punto del volcán (volcanes_lodo_pt) a cada polígono de construcción — NO es el mismo conteo que usa la zona de influencia modelada de priorizacion_volcanes_lodo.xlsx, son dos radios/métodos distintos y no intercambiables. Mapa de amenaza: No incluido en el modelado de amenaza Q-LavHA del Informe_flujos_Mayo2026 (7 volcanes priorizados: El Aburrido, Las Platas, Melito Alto, Pueblo Nuevo, Las Changas, Cacahual, Alto de Mulatos). Sin cartografía de amenaza específica identificada en las fuentes disponibles para este volcán.\nMorfometría: Edificio pequeño y DEM de 12,4 m; la base radial es unas 2 veces la zona de influencia.",
+      "nombre": "Volcán Vereda Molinillo",
+      "imagenes": {
+        "mapa_ubicacion": {
+          "archivo": "./assets/mapas/volcan_vereda_molinillo/ubicacion.webp",
+          "pie": ""
+        },
+        "morfometria": {
+          "archivo": "./assets/mapas/volcan_vereda_molinillo/morfometria.webp",
+          "pie": "Morfometría de Volcán Vereda Molinillo: (a) mapa del DEM con la base y los ejes; (b) perfiles A-B y C-D."
+        },
+        "foto": {
+          "archivo": "./assets/fotos/volcan_vereda_molinillo/principal-20261027202345520.webp",
+          "pie": "Vuelo Dron DAGRD "
+        }
+      },
+      "actualizado": "2026-10-27",
+      "morfometria": {
+        "clase": "Domo",
+        "clase_calculada": "Cono",
+        "origen_clase": "usuario",
+        "tamano": "Pequeño",
+        "dmax_m": 1127,
+        "dmin_m": 950,
+        "dmean_m": 1039,
+        "altura_m": 58.6,
+        "hr": 0.113,
+        "arctan_hr_grados": 6.4,
+        "pendiente_dem_grados": 7.8,
+        "azimuts_interpolados": 43,
+        "pct_azimuts_interpolados": 0.36,
+        "base_poco_fiable": false,
+        "hr_alto_segun_articulo": true,
+        "bsr": 0.843,
+        "dem": "MDS12_05665_20140316.tif",
+        "sb_km2_circulo": 0.847,
+        "v_cono_km3": 0.0164,
+        "fuente": "Napoli et al. (2025); morfometria_clasificacion.xlsx"
+      },
+      "galeria": [],
+      "vereda": "Molinillo"
+    },
+    "los_almendros": {
+      "municipio": "San Pedro de Urabá",
+      "nombre_principal": "Los Almendros",
+      "altitud_msnm": 155,
+      "estado_actividad": "Sin clasificación oficial publicada disponible para este volcán específico en las fuentes consultadas.",
+      "ultima_erupcion_texto": "No se encontró un evento documentado específico para este volcán en la bibliografía y prensa revisadas.",
+      "red_monitoreo": "No cuenta con una red instrumental de monitoreo sísmico ni geodésico (GPS) específica.",
+      "afectaciones": {
+        "construcciones_500m": 7,
+        "construcciones_1km": 7,
+        "infraestructura_critica": "",
+        "poblacion": "",
+        "amenaza_texto": "Sin modelado de propagación de flujos para este volcán."
+      },
+      "notas_internas": "Vías: PENDIENTE (misma capa E:\\, desconectada). Acueductos, redes eléctricas y aeropuertos: no existe ninguna capa de estos temas en el proyecto actualmente — se requiere que Emilio indique la fuente si existe.\nPENDIENTE — requiere la capa de viviendas (E:\\Cartografia_SAMA.gdb), actualmente desconectada. Nota: los conteos de viviendas ya calculados en priorizacion_volcanes_lodo.xlsx usan el polígono de área de influencia modelada de cada volcán, no anillos fijos de 500 m/1 km/2 km — son cifras distintas y no intercambiables.\nMapa de amenaza (texto original): No incluido en el modelado de amenaza Q-LavHA del Informe_flujos_Mayo2026 (7 volcanes priorizados: El Aburrido, Las Platas, Melito Alto, Pueblo Nuevo, Las Changas, Cacahual, Alto de Mulatos). Sin cartografía de amenaza específica identificada en las fuentes disponibles para este volcán.\nFuente: capa Construcciones_Afectadas cargada por Emilio (D:\\SAMA\\diapiros\\insumos_priorizacion\\Volcanes_Lodo_Uraba_20260910.gdb), distancia recta desde el punto del volcán (volcanes_lodo_pt) a cada polígono de construcción — NO es el mismo conteo que usa la zona de influencia modelada de priorizacion_volcanes_lodo.xlsx, son dos radios/métodos distintos y no intercambiables. Mapa de amenaza: No incluido en el modelado de amenaza Q-LavHA del Informe_flujos_Mayo2026 (7 volcanes priorizados: El Aburrido, Las Platas, Melito Alto, Pueblo Nuevo, Las Changas, Cacahual, Alto de Mulatos). Sin cartografía de amenaza específica identificada en las fuentes disponibles para este volcán.\nMorfometría: El polígono de cráter tiene la misma área que la zona de influencia (82 776 m²): cráter/base no es comparable.",
+      "nombre": "Los Almendros",
+      "imagenes": {
+        "mapa_ubicacion": {
+          "archivo": "./assets/mapas/los_almendros/ubicacion.webp",
+          "pie": ""
+        },
+        "morfometria": {
+          "archivo": "./assets/mapas/los_almendros/morfometria.webp",
+          "pie": "Morfometría de Los Almendros: (a) mapa del DEM con la base y los ejes; (b) perfiles A-B y C-D."
+        }
+      },
+      "actualizado": "2026-10-27",
+      "morfometria": {
+        "clase": "Domo",
+        "clase_calculada": "Cono",
+        "origen_clase": "usuario",
+        "tamano": "Mediano",
+        "dmax_m": 989,
+        "dmin_m": 778,
+        "dmean_m": 884,
+        "altura_m": 41.1,
+        "hr": 0.093,
+        "arctan_hr_grados": 5.3,
+        "pendiente_dem_grados": 8.4,
+        "azimuts_interpolados": 44,
+        "pct_azimuts_interpolados": 0.37,
+        "base_poco_fiable": false,
+        "hr_alto_segun_articulo": true,
+        "bsr": 0.786,
+        "dem": "MDS12_05665_20140316.tif",
+        "sb_km2_circulo": 0.613,
+        "v_cono_km3": 0.0083,
+        "fuente": "Napoli et al. (2025); morfometria_clasificacion.xlsx"
+      }
+    },
+    "las_platas_ii": {
+      "nombre": "Las Platas II",
+      "morfometria": {
+        "clase": "Domo",
+        "clase_calculada": "Cono",
+        "origen_clase": "usuario",
+        "tamano": "Mediano",
+        "dmax_m": 1016,
+        "dmin_m": 846,
+        "dmean_m": 931,
+        "altura_m": 58.1,
+        "hr": 0.125,
+        "arctan_hr_grados": 7.1,
+        "pendiente_dem_grados": 8.9,
+        "azimuts_interpolados": 42,
+        "pct_azimuts_interpolados": 0.35,
+        "base_poco_fiable": false,
+        "hr_alto_segun_articulo": true,
+        "bsr": 0.833,
+        "dem": "sub_uraba1.tif",
+        "sb_km2_circulo": 0.681,
+        "v_cono_km3": 0.0131,
+        "fuente": "Napoli et al. (2025); morfometria_clasificacion.xlsx"
+      },
+      "actualizado": "2026-10-27",
+      "notas_internas": "Morfometría: Sin cráter digitalizado: la cumbre es el máximo del DEM a <= 250 m del punto.",
+      "imagenes": {
+        "morfometria": {
+          "archivo": "./assets/mapas/las_platas_ii/morfometria.webp",
+          "pie": "Morfometría de Las Platas II: (a) mapa del DEM con la base y los ejes; (b) perfiles A-B y C-D."
+        }
+      }
+    }
+  }
+}

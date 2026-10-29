@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SAMA | Monitoreo de volcanes de lodo</title>
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./css/styles.css?v=20261027-ficha-sama"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./css/ficha.css?v=20261027-linea"
+    >
+</head>
+
+<body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <!-- =====================================================
+         CABECERA INSTITUCIONAL
+    ====================================================== -->
+    <header class="institutional-header no-imprimir">
+        <div class="institutional-inner">
+
+            <img
+                src="./assets/logos/sama.png"
+                alt="SAMA"
+                class="logo-sama"
+            >
+
+            <img
+                src="./assets/logos/instituciones.png"
+                alt="Instituciones participantes"
+                class="logo-instituciones"
+            >
+
+        </div>
+        <nav class="site-nav" aria-label="Navegación del geoportal">
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-links">☰ Menú</button>
+            <div class="nav-links" id="site-links">
+                <a href="./#resumen">Resumen</a>
+                <a href="./#mapa">Mapa</a>
+                <select id="volcano-nav-select" class="nav-select" aria-label="Ir a la ficha de un volcán">
+                    <option value="">Ir a un volcán…</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+    <div id="contenido" tabindex="-1"></div>
+
+
+    <!-- =====================================================
+         VISTA GENERAL
+    ====================================================== -->
+    <section id="home-view">
+        <main>
+
+            <section id="resumen" class="hero-section">
+                <div>
+                    <p class="eyebrow">Boletín de monitoreo · InSAR</p>
+                    <h1>Boletín de Volcanes de Lodo</h1>
+                </div>
+                <p class="hero-subtitle">
+                    Monitoreo satelital de cambios en la superficie mediante
+                    interferometría radar en volcanes de lodo de Antioquia.
+                </p>
+            </section>
+
+            <section class="general-summary">
+
+                <div class="stats-grid home-stats-grid">
+
+                    <article class="stat-card">
+                        <span>
+                            Edificios volcánicos registrados
+                        </span>
+                        <strong id="stat-volcanic-buildings">
+                            26
+                        </strong>
+                    </article>
+
+                    <article class="stat-card">
+                        <span>
+                            Monitoreados por InSAR
+                        </span>
+                        <strong id="stat-insar">
+                            --
+                        </strong>
+                    </article>
+
+                    <article class="stat-card seismic-card">
+                        <span>
+                            Monitoreados con sísmica
+                        </span>
+                        <strong id="stat-seismic">
+                            --
+                        </strong>
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <section id="mapa" class="map-section" aria-label="Mapa de volcanes de lodo y estaciones sísmicas">
+                <div id="general-map"></div>
+
+                <aside class="map-panel" aria-label="Leyenda del mapa">
+                    <p class="eyebrow">Antioquia</p>
+                    <h2>Capas del mapa</h2>
+
+                    <div class="map-legend-list">
+                        <span><i class="map-symbol volcano-symbol-combined"></i>Monitoreo satelital y sísmico</span>
+                        <span><i class="map-symbol volcano-symbol-insar"></i>Monitoreo satelital</span>
+                        <span><i class="map-symbol volcano-symbol-no-insar"></i>Sin monitoreo instrumental</span>
+                        <span><i class="municipality-symbol"></i>Límite municipal</span>
+                    </div>
+
+                    <p class="map-note">
+                        Seleccione un volcán para ver su resumen y abrir su ficha técnica.
+                    </p>
+                </aside>
+            </section>
+
+        </main>
+    </section>
+
+
+    <!-- =====================================================
+         VISTA DEL BOLETIN
+    ====================================================== -->
+    <section id="bulletin-view" hidden>
+
+        <div class="bulletin-toolbar no-imprimir" id="bulletin-toolbar">
+            <button
+                id="back-button"
+                class="back-button"
+                type="button"
+            >
+                ← Volver al mapa general
+            </button>
+
+            <nav class="section-nav" aria-label="Secciones del boletín">
+                <a href="#seccion-insar" id="nav-insar">Monitoreo InSAR</a>
+                <a href="#seccion-ficha">Ficha técnica</a>
+                <a href="#seccion-morfometria" id="nav-morfometria">Morfometría</a>
+                <a href="#seccion-fuentes">Fuentes</a>
+            </nav>
+
+            <div class="toolbar-acciones">
+                <button id="edit-button" class="toolbar-button" type="button" hidden>✎ Editar boletín</button>
+                <button id="pdf-button" class="toolbar-button toolbar-button-primary" type="button">⤓ Descargar PDF</button>
+            </div>
+        </div>
+
+        <main>
+
+            <section class="bulletin-heading no-imprimir">
+                <div>
+                    <p class="eyebrow">
+                        BOLETÍN DE MONITOREO
+                    </p>
+
+                    <h1 id="volcano-name">
+                        --
+                    </h1>
+
+                    <p id="volcano-subtitle" class="bulletin-subtitle"></p>
+                </div>
+            </section>
+
+
+            <!-- =============================================
+                 MONITOREO INSAR (solo volcanes con InSAR)
+            ============================================== -->
+            <section id="seccion-insar" class="no-imprimir">
+
+                <div class="insar-heading">
+                    <h2 class="section-main-title">
+                        Monitoreo satelital InSAR
+                    </h2>
+
+                    <div class="date-control">
+                        <label for="date-select">
+                            Fecha de observación
+                        </label>
+
+                        <select id="date-select"></select>
+                    </div>
+                </div>
+
+
+                <!-- =========================================
+                     RESUMEN
+                ========================================== -->
+                <section class="summary-section">
+
+                    <h2>
+                        Resumen de la observación
+                    </h2>
+
+                    <div class="stats-grid">
+
+                        <article class="stat-card">
+                            <span>
+                                Cambio mínimo
+                            </span>
+                            <strong id="stat-min">
+                                --
+                            </strong>
+                        </article>
+
+                        <article class="stat-card">
+                            <span>
+                                Cambio máximo
+                            </span>
+                            <strong id="stat-max">
+                                --
+                            </strong>
+                        </article>
+
+                        <article class="stat-card">
+                            <span>
+                                Cambio promedio
+                            </span>
+                            <strong id="stat-mean">
+                                --
+                            </strong>
+                        </article>
+
+                        <article class="stat-card">
+                            <span>
+                                Último dato disponible
+                            </span>
+                            <strong id="stat-date">
+                                --
+                            </strong>
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =========================================
+                     MAPA + CONCEPTOS
+                ========================================== -->
+                <section class="map-and-concepts">
+
+                    <div class="map-column">
+
+                        <div id="bulletin-map"></div>
+
+
+                        <div class="map-legend">
+
+                            <h3>
+                                Cambio observado
+                            </h3>
+
+                            <div class="color-scale">
+                                <span style="background:#d73027"></span>
+                                <span style="background:#f46d43"></span>
+                                <span style="background:#fdae61"></span>
+                                <span style="background:#fee090"></span>
+                                <span style="background:#ffffbf"></span>
+                                <span style="background:#e0f3f8"></span>
+                                <span style="background:#abd9e9"></span>
+                                <span style="background:#74add1"></span>
+                                <span style="background:#4575b4"></span>
+                            </div>
+
+                            <div class="legend-values">
+                                <span>-6 cm</span>
+                                <span>0 cm</span>
+                                <span>+6 cm</span>
+                            </div>
+
+                        </div>
+
+
+                        <section class="observation-description">
+
+                            <h3>
+                                Descripción de la observación
+                            </h3>
+
+                            <p id="observation-description">
+                                --
+                            </p>
+
+                        </section>
+
+                    </div>
+
+
+                    <aside class="concepts-panel">
+
+                        <h2>
+                            Conceptos
+                        </h2>
+
+                        <div class="concept-item">
+                            <h3>Edificio volcánico</h3>
+                            <p>
+                                Formación superficial visible por donde pueden
+                                emerger lodo, agua y gases provenientes del subsuelo.
+                            </p>
+                        </div>
+
+                        <div class="concept-item">
+                            <h3>Diapiro de lodo</h3>
+                            <p>
+                                Proceso geológico asociado al ascenso de materiales
+                                arcillosos y fluidos desde el subsuelo.
+                            </p>
+                        </div>
+
+                        <div class="concept-item">
+                            <h3>Línea de vista (LOS)</h3>
+                            <p>
+                                Dirección de observación del radar satelital sobre
+                                la cual se proyecta la deformación medida.
+                            </p>
+                        </div>
+
+                        <div class="concept-item">
+                            <h3>Mapa de deformación</h3>
+                            <p>
+                                Representación espacial del desplazamiento acumulado
+                                observado mediante imágenes radar respecto a una
+                                fecha de referencia.
+                            </p>
+                        </div>
+
+                        <div class="concept-item">
+                            <h3>Serie temporal</h3>
+                            <p>
+                                Representa la evolución de la deformación promedio
+                                del área analizada a través de las diferentes fechas
+                                de observación.
+                            </p>
+                        </div>
+
+                    </aside>
+
+                </section>
+
+
+                <!-- =========================================
+                     SERIE TEMPORAL
+                ========================================== -->
+                <section class="time-series-section">
+
+                    <div class="section-header">
+
+                        <h2>
+                            Evolución de la deformación acumulada promedio
+                        </h2>
+
+                        <p>
+                            Evolución temporal del desplazamiento promedio observado
+                            en la línea de vista del sensor (LOS).
+                        </p>
+
+                    </div>
+
+                    <p
+                        id="time-series-message"
+                        class="chart-message"
+                        hidden
+                    ></p>
+
+                    <div class="time-series-chart">
+                        <canvas id="evolution-chart"></canvas>
+                    </div>
+
+                </section>
+
+
+                <!-- =========================================
+                     INFORMACION TECNICA
+                ========================================== -->
+                <section class="technical-section">
+
+                    <h2>
+                        Más información
+                    </h2>
+
+                    <div class="technical-grid">
+
+                        <article class="technical-item">
+                            <span>Satélite</span>
+                            <strong id="technical-sensor">--</strong>
+                        </article>
+
+                        <article class="technical-item">
+                            <span>Método</span>
+                            <strong id="technical-method">--</strong>
+                        </article>
+
+                        <article class="technical-item">
+                            <span>Procesamiento</span>
+                            <strong id="technical-processing">--</strong>
+                        </article>
+
+                        <article class="technical-item">
+                            <span>Geometría</span>
+                            <strong id="technical-geometry">--</strong>
+                        </article>
+
+                    </div>
+
+                    <p
+                        id="technical-note"
+                        class="technical-note"
+                    >
+                        La información presentada tiene carácter informativo y
+                        corresponde a observaciones satelitales de cambios en la
+                        superficie.
+                    </p>
+
+                </section>
+
+            </section>
+
+            <aside id="insar-aviso" class="notice no-imprimir" hidden>
+                <h2>Sin monitoreo InSAR por ahora</h2>
+                <p>
+                    Este volcán todavía no cuenta con observaciones de deformación
+                    por interferometría radar. Su ficha técnica, con ubicación,
+                    actividad histórica y gestión del riesgo, está disponible abajo.
+                </p>
+            </aside>
+
+
+            <!-- =============================================
+                 FICHA TECNICA (estilo Boletín de Diapiros de Lodo)
+            ============================================== -->
+            <section id="seccion-ficha" aria-labelledby="titulo-ficha">
+
+                <div class="section-header no-imprimir">
+                    <h2 id="titulo-ficha" class="section-main-title">Ficha técnica</h2>
+                    <p>
+                        Identificación, actividad histórica, monitoreo y gestión del
+                        riesgo. Toque una imagen para ampliarla; use «Descargar PDF»
+                        para guardar la ficha en una página.
+                    </p>
+                </div>
+
+                <article id="ficha-boletin" class="ficha">
+
+                    <header class="ficha-cabecera">
+                        <div class="ficha-marca">
+                            <img
+                                src="./assets/logos/sama.png"
+                                alt="SAMA, Sistema de Alerta y Monitoreo de Antioquia"
+                                class="ficha-logo-sama"
+                            >
+                        </div>
+
+                        <div class="ficha-titulo">
+                            <h2>BOLETÍN DE<br>DIAPIROS DE LODO</h2>
+                            <p>
+                                BOLETÍN NRO <span id="f-numero">XXXXXXX</span> –
+                                <span id="f-fecha">--</span>
+                            </p>
+                        </div>
+
+                        <div class="ficha-redes">
+                            <strong id="f-red-social">@DagranAntioquia</strong>
+                            <span class="ficha-iconos" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg>
+                                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M14 8V6.5c0-.8.2-1.2 1.3-1.2H17V2.1C16.7 2.1 15.7 2 14.5 2 12 2 10.3 3.5 10.3 6.2V8H7.5v3.4h2.8V22H14V11.4h2.7L17.1 8H14z"/></svg>
+                                <svg viewBox="0 0 24 24"><path fill="currentColor" d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.3L5.3 21H2.2l7.3-8.3L2 3h6.4l4.4 5.8L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg>
+                            </span>
+                        </div>
+
+                        <img
+                            src="./assets/logos/instituciones.png"
+                            alt="Universidad EAFIT, Dagran y Gobernación de Antioquia"
+                            class="ficha-logo-instituciones"
+                        >
+                    </header>
+
+                    <div class="ficha-cuerpo">
+
+                        <!-- ===== Columna izquierda ===== -->
+                        <div class="ficha-izq">
+
+                            <section class="tarjeta" id="f-identificacion">
+                                <h3 class="pildora">Identificación y ubicación general</h3>
+                                <p class="fila"><b>Nombre principal:</b> <span id="f-nombre"></span></p>
+                                <p class="fila"><b>Municipio:</b> <span id="f-municipio"></span></p>
+                                <p class="fila" id="f-vereda-fila"><b>Vereda:</b> <span id="f-vereda"></span></p>
+                                <div class="ficha-coords">
+                                    <p>
+                                        <b>Latitud:</b> <span id="f-lat"></span><br>
+                                        <span class="dms" id="f-lat-dms"></span>
+                                    </p>
+                                    <p>
+                                        <b>Altitud:</b> <span id="f-alt"></span><br>
+                                        <b>Longitud:</b> <span id="f-lon"></span><br>
+                                        <span class="dms" id="f-lon-dms"></span>
+                                    </p>
+                                </div>
+                            </section>
+
+                            <figure class="ficha-foto" id="f-foto">
+                                <img alt="" data-zoom>
+                                <figcaption></figcaption>
+                            </figure>
+
+                            <section class="tarjeta" id="f-card-ubicacion">
+                                <h3 class="pildora">Ubicación</h3>
+                                <figure class="ficha-ubicacion" id="f-ubicacion">
+                                    <img alt="" data-zoom>
+                                </figure>
+                            </section>
+
+                            <section class="tarjeta">
+                                <h3 class="pildora">Clasificación y contexto</h3>
+                                <p class="fila"><b>Tipo de diapiro:</b> <span id="f-tipo"></span></p>
+                                <p class="fila" id="f-clase-fila"><b>Clase morfométrica:</b> <span id="f-clase"></span></p>
+                            </section>
+
+                            <section class="tarjeta">
+                                <h3 class="pildora">Actividad histórica - estado de actividad</h3>
+                                <p class="estado" id="f-estado"></p>
+                                <ul class="erupciones" id="f-erupciones"></ul>
+                            </section>
+
+                            <section class="tarjeta">
+                                <h3 class="pildora">Red de monitoreo</h3>
+                                <p id="f-red"></p>
+                            </section>
+
+                        </div>
+
+                        <!-- ===== Columna derecha ===== -->
+                        <div class="ficha-der">
+
+                            <section class="tarjeta ficha-fila">
+                                <figure class="ficha-mapa" id="f-propagacion">
+                                    <img alt="" data-zoom>
+                                </figure>
+                                <div class="ficha-texto">
+                                    <h3 class="pildora">Morfología</h3>
+                                    <p id="f-morfologia"></p>
+                                    <ul class="chips" id="f-chips"></ul>
+                                    <p class="fila"><b>Comportamiento del flujo:</b> <span id="f-flujo"></span></p>
+                                </div>
+                            </section>
+
+                            <section class="tarjeta ficha-fila">
+                                <figure class="ficha-mapa" id="f-amenaza">
+                                    <img alt="" data-zoom>
+                                </figure>
+                                <div class="ficha-texto">
+                                    <h3 class="pildora">Gestión del riesgo - Socionatural</h3>
+                                    <p id="f-poblacion"></p>
+                                    <p id="f-construcciones"></p>
+                                    <p class="fila"><b>Infraestructura crítica expuesta:</b> <span id="f-infra"></span></p>
+                                    <p class="fila" id="f-amenaza-fila"><b>Amenaza:</b> <span id="f-amenaza-texto"></span></p>
+                                </div>
+                            </section>
+
+                            <section class="ficha-alertas">
+                                <h3>Interpretación de los niveles de alerta para el fenómeno de diapiros de lodo</h3>
+                                <div class="niveles" id="f-niveles"></div>
+                            </section>
+
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+
+
+            <!-- =============================================
+                 LINEA DE TIEMPO DE LA ACTIVIDAD HISTORICA
+            ============================================== -->
+            <section id="seccion-actividad" class="actividad-seccion no-imprimir" hidden>
+
+                <div class="section-header">
+                    <h2 class="section-main-title">Línea de tiempo de la actividad</h2>
+                    <p id="linea-resumen"></p>
+                </div>
+
+                <div class="linea-tiempo-caja">
+                    <ol class="linea-tiempo" id="linea-tiempo" aria-label="Erupciones registradas"></ol>
+                </div>
+
+                <div id="ultima-erupcion-bloque" class="ultima-erupcion" hidden>
+                    <h3>Última erupción conocida</h3>
+                    <p id="ultima-erupcion"></p>
+                </div>
+
+            </section>
+
+
+            <!-- =============================================
+                 MORFOMETRIA
+            ============================================== -->
+            <section id="seccion-morfometria" class="morfo-seccion no-imprimir" hidden>
+
+                <div class="section-header">
+                    <h2 class="section-main-title">Morfometría del edificio</h2>
+                    <p>
+                        Parámetros calculados sobre el modelo digital de elevación
+                        (DEM) para clasificar el edificio como cono, pastel de lodo
+                        o domo.
+                    </p>
+                </div>
+
+                <div class="morfo-grid">
+
+                    <div class="morfo-panel">
+                        <div class="morfo-clase">
+                            <span>Clase morfométrica</span>
+                            <strong id="m-clase">--</strong>
+                            <em id="m-tamano" class="insignia"></em>
+                        </div>
+
+                        <table class="morfo-tabla">
+                            <tbody id="m-tabla"></tbody>
+                        </table>
+
+                        <p id="m-aviso" class="aviso-inline" hidden></p>
+
+                        <details class="morfo-detalle">
+                            <summary>Cómo leer la figura y la clasificación</summary>
+                            <ul>
+                                <li><b>(a)</b> Mapa del DEM con el contorno de la base (P), el área basal (Sb) y los ejes mayor (Dmax) y menor (Dmin).</li>
+                                <li><b>(b)</b> Perfil A–B, con la pendiente local, y perfil C–D, con la cota de la cumbre, la altura (H), la cota basal y el volumen.</li>
+                                <li>El pie de la figura reúne Sb, P, Dmax, Dmin, H, H/R, arctan(H/R) y V medidos sobre el DEM.</li>
+                                <li>Un edificio es un cono si arctan(H/R) ≥ 5° y un pastel de lodo si es menor (Napoli et al., 2025). La clase mostrada puede haber sido ajustada por el equipo de análisis.</li>
+                            </ul>
+                        </details>
+                    </div>
+
+                    <figure class="morfo-figura">
+                        <img id="m-figura" alt="" loading="lazy" data-zoom>
+                        <figcaption id="m-pie"></figcaption>
+                    </figure>
+
+                </div>
+            </section>
+
+
+            <!-- =============================================
+                 FUENTES, GALERIA Y NOTAS
+            ============================================== -->
+            <section id="seccion-fuentes" class="fuentes-seccion no-imprimir">
+
+                <h2 class="section-main-title">Fuentes y notas</h2>
+
+                <div id="galeria-bloque" hidden>
+                    <h3>Galería</h3>
+                    <div class="galeria" id="galeria"></div>
+                </div>
+
+                <div class="notas-ficha">
+                    <p id="nota-monitoreo"></p>
+                    <p id="nota-construcciones"></p>
+                    <p id="nota-vigilancia"></p>
+                </div>
+
+                <h3>Fuentes consultadas</h3>
+                <ol class="fuentes-lista" id="fuentes-lista"></ol>
+
+                <p class="actualizado" id="actualizado"></p>
+
+            </section>
+
+        </main>
+
+        <aside id="editor-panel" class="editor-panel no-imprimir" aria-label="Editor del boletín" hidden></aside>
+    </section>
+
+
+    <dialog id="visor-imagen" class="visor no-imprimir" aria-label="Imagen ampliada">
+        <form method="dialog">
+            <button class="visor-cerrar" aria-label="Cerrar">✕</button>
+        </form>
+        <img alt="">
+        <p></p>
+    </dialog>
+
+
+    <footer class="no-imprimir">
+        <span>SAMA · Sistema de Alerta y Monitoreo de Antioquia</span>
+        <span>Monitoreo satelital de volcanes de lodo · InSAR</span>
+    </footer>
+
+    <!-- =====================================================
+         LIBRERIAS
+    ====================================================== -->
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    ></script>
+
+    <script
+        src="https://unpkg.com/georaster"
+    ></script>
+
+    <script
+        src="https://unpkg.com/georaster-layer-for-leaflet"
+    ></script>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/chart.js"
+    ></script>
+
+    <script
+        type="module"
+        src="./js/app.js?v=20261027-linea"
+    ></script>
+
+</body>
+</html>

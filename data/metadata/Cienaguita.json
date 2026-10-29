@@ -1,0 +1,13 @@
+{
+  "id": "cienaguita",
+  "nombre": "Cienaguita",
+  "sensor": "SAOCOM",
+  "metodo": "InSAR",
+  "procesamiento": "ISCE + MintPy",
+  "geometria": "Descendente 137",
+  "unidad_raster": "m",
+  "unidad_visualizacion": "cm",
+  "crs": "EPSG:4326",
+  "fecha_referencia": "20250916",
+  "nota": "Desplazamiento acumulado LOS respecto a la fecha de referencia de MintPy."
+}

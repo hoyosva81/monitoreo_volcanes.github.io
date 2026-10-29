@@ -1,0 +1,13 @@
+{
+  "id": "san_rafael",
+  "nombre": "San Rafael",
+  "sensor": "SAOCOM",
+  "metodo": "InSAR",
+  "procesamiento": "ISCE + MintPy",
+  "geometria": "Ascendente 463",
+  "unidad_raster": "m",
+  "unidad_visualizacion": "cm",
+  "crs": "EPSG:4326",
+  "fecha_referencia": "20250915",
+  "nota": "Desplazamiento acumulado LOS respecto a la fecha de referencia de MintPy."
+}

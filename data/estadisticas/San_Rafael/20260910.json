@@ -1,0 +1,48 @@
+{
+  "fecha": "20260910",
+  "unidad": "cm",
+  "pixeles_validos": 1146,
+  "minimo_cm": -2.160697989165783,
+  "maximo_cm": 3.282266855239868,
+  "promedio_cm": 0.28334513992208493,
+  "mediana_cm": 0.2704345155507326,
+  "desviacion_cm": 0.6731056394772508,
+  "categorias": [
+    {
+      "nombre": "< -6 cm",
+      "pixeles": 0
+    },
+    {
+      "nombre": "-6 a -4 cm",
+      "pixeles": 0
+    },
+    {
+      "nombre": "-4 a -2 cm",
+      "pixeles": 1
+    },
+    {
+      "nombre": "-2 a -1 cm",
+      "pixeles": 22
+    },
+    {
+      "nombre": "-1 a +1 cm",
+      "pixeles": 967
+    },
+    {
+      "nombre": "+1 a +2 cm",
+      "pixeles": 145
+    },
+    {
+      "nombre": "+2 a +4 cm",
+      "pixeles": 11
+    },
+    {
+      "nombre": "+4 a +6 cm",
+      "pixeles": 0
+    },
+    {
+      "nombre": ">= +6 cm",
+      "pixeles": 0
+    }
+  ]
+}

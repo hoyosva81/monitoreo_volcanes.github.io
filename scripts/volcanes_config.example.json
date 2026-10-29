@@ -1,0 +1,22 @@
+{
+  "base_saocom": "/ruta/local/saocom",
+  "archivo_h5": "geo_timeseries_ERA5_ramp_demErr.h5",
+  "mascara": "/ruta/local/radios_influencia.shp",
+  "campo_mascara": "nombre",
+  "puntos": "/ruta/local/volcanes_lodo_pt.shp",
+  "campo_punto": "name",
+  "puntos_kmz": "/ruta/local/volcanes_lodo.kmz",
+  "campo_nombre_kmz": "Name",
+  "flujos": "/ruta/local/Bocas.shp",
+  "volcanes": [
+    {
+      "orbita": "asc463",
+      "carpeta": "NombreCarpetaOrigen",
+      "nombre": "Nombre del volcán",
+      "nombre_mascara": "Nombre del volcán en la máscara",
+      "id": "nombre_del_volcan",
+      "carpeta_salida": "Nombre_del_volcan",
+      "geometria": "Ascendente 463"
+    }
+  ]
+}

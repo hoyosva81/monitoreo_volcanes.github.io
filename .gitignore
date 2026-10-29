@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.vscode/
+.pytest_cache/
+*.tmp
+
+# Configuración local: contiene rutas a discos y datos fuera del repositorio.
+scripts/volcanes_config.json
+
+# Informe generado por la última ejecución del procesador.
+data/reporte_generacion.json
+
+# Copia de seguridad que crea el editor de la ficha antes de cada guardado.
+data/boletin.json.bak

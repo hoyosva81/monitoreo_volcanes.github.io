@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "volcanes": [
+    {
+      "id": "el_aburrido",
+      "nombre": "El Aburrido",
+      "metadata": "./data/metadata/El_Aburrido.json",
+      "area": "./data/areas/El_Aburrido.geojson",
+      "flujos": "./data/flujos/El_Aburrido.geojson",
+      "serie": "./data/series/El_Aburrido.json",
+      "fechas": [
+        {
+          "fecha": "20260910",
+          "raster": "./data/rasters/El_Aburrido/20260910.tif",
+          "estadisticas": "./data/estadisticas/El_Aburrido/20260910.json"
+        }
+      ]
+    },
+    {
+      "id": "san_rafael",
+      "nombre": "San Rafael",
+      "fechas": [
+        {
+          "fecha": "20260910",
+          "raster": "./data/rasters/San_Rafael/20260910.tif",
+          "estadisticas": "./data/estadisticas/San_Rafael/20260910.json"
+        }
+      ],
+      "metadata": "./data/metadata/San_Rafael.json",
+      "area": "./data/areas/San_Rafael.geojson",
+      "serie": "./data/series/San_Rafael.json",
+      "flujos": "./data/flujos/San_Rafael.geojson"
+    },
+    {
+      "id": "cienaguita",
+      "nombre": "Cienaguita",
+      "fechas": [
+        {
+          "fecha": "20260911",
+          "raster": "./data/rasters/Cienaguita/20260911.tif",
+          "estadisticas": "./data/estadisticas/Cienaguita/20260911.json"
+        }
+      ],
+      "metadata": "./data/metadata/Cienaguita.json",
+      "area": "./data/areas/Cienaguita.geojson",
+      "serie": "./data/series/Cienaguita.json",
+      "flujos": "./data/flujos/Cienaguita.geojson"
+    },
+    {
+      "id": "las_platas_i",
+      "nombre": "Las Platas",
+      "fechas": [
+        {
+          "fecha": "20260911",
+          "raster": "./data/rasters/Las_Platas_I/20260911.tif",
+          "estadisticas": "./data/estadisticas/Las_Platas_I/20260911.json"
+        }
+      ],
+      "metadata": "./data/metadata/Las_Platas_I.json",
+      "area": "./data/areas/Las_Platas_I.geojson",
+      "serie": "./data/series/Las_Platas_I.json",
+      "flujos": "./data/flujos/Las_Platas_I.geojson"
+    },
+    {
+      "id": "las_platas_ii",
+      "nombre": "Las Platas II",
+      "fechas": [
+        {
+          "fecha": "20260911",
+          "raster": "./data/rasters/Las_Platas_II/20260911.tif",
+          "estadisticas": "./data/estadisticas/Las_Platas_II/20260911.json"
+        }
+      ],
+      "metadata": "./data/metadata/Las_Platas_II.json",
+      "area": "./data/areas/Las_Platas_II.geojson",
+      "serie": "./data/series/Las_Platas_II.json"
+    },
+    {
+      "id": "melito_alto",
+      "nombre": "Melito Alto",
+      "fechas": [
+        {
+          "fecha": "20260911",
+          "raster": "./data/rasters/Melito_Alto/20260911.tif",
+          "estadisticas": "./data/estadisticas/Melito_Alto/20260911.json"
+        }
+      ],
+      "metadata": "./data/metadata/Melito_Alto.json",
+      "area": "./data/areas/Melito_Alto.geojson",
+      "serie": "./data/series/Melito_Alto.json"
+    },
+    {
+      "id": "palmares_cenizosa",
+      "nombre": "Palmares Cenizosa",
+      "fechas": [
+        {
+          "fecha": "20260911",
+          "raster": "./data/rasters/Palmares_Cenizosa/20260911.tif",
+          "estadisticas": "./data/estadisticas/Palmares_Cenizosa/20260911.json"
+        }
+      ],
+      "metadata": "./data/metadata/Palmares_Cenizosa.json",
+      "area": "./data/areas/Palmares_Cenizosa.geojson",
+      "serie": "./data/series/Palmares_Cenizosa.json",
+      "flujos": "./data/flujos/Palmares_Cenizosa.geojson"
+    },
+    {
+      "id": "san_juancito",
+      "nombre": "San Juancito",
+      "fechas": [
+        {
+          "fecha": "20260911",
+          "raster": "./data/rasters/San_Juancito/20260911.tif",
+          "estadisticas": "./data/estadisticas/San_Juancito/20260911.json"
+        }
+      ],
+      "metadata": "./data/metadata/San_Juancito.json",
+      "area": "./data/areas/San_Juancito.geojson",
+      "serie": "./data/series/San_Juancito.json",
+      "flujos": "./data/flujos/San_Juancito.geojson"
+    },
+    {
+      "id": "las_changas",
+      "nombre": "Las Changas",
+      "metadata": "./data/metadata/Las_Changas.json",
+      "area": "./data/areas/Las_Changas.geojson",
+      "flujos": "./data/flujos/Las_Changas.geojson",
+      "serie": "./data/series/Las_Changas.json",
+      "fechas": [
+        {
+          "fecha": "20260911",
+          "raster": "./data/rasters/Las_Changas/20260911.tif",
+          "estadisticas": "./data/estadisticas/Las_Changas/20260911.json"
+        }
+      ]
+    }
+  ]
+}
